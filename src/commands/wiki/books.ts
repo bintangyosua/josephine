@@ -10,7 +10,7 @@ import {
 import { Command } from "../../types/command";
 import { wikiServices } from "../../lib/api/wiki"; // Pastikan ini di-import sesuai dengan file service kamu
 
-const ITEMS_PER_PAGE = 25;
+const ITEMS_PER_PAGE = 15;
 
 function getBookDetailEmbed(book: any, index: number) {
   return new EmbedBuilder()
@@ -119,7 +119,7 @@ function getBookSelectMenu(page: number, books: any[]) {
 }
 
 const BooksCommand: Command = {
-  category: "📚 Wiki",
+  category: "📔 Wiki",
   data: new SlashCommandBuilder()
     .setName("books")
     .setDescription("Tampilkan daftar buku berdasarkan pencarian.")
