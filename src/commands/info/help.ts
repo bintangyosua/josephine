@@ -3,7 +3,7 @@ import { Command } from "../../types/command";
 import { ExtendedClient } from "../../client/extended-client";
 
 const HelpCommand: Command = {
-  category: "Info",
+  category: "ℹ️  Info",
   data: new SlashCommandBuilder()
     .setName("help")
     .setDescription("Shows all available commands by category"),
@@ -21,15 +21,18 @@ const HelpCommand: Command = {
     });
 
     const embed = new EmbedBuilder()
-      .setTitle("📖 Help Menu")
+      .setAuthor({
+        iconURL: interaction.user.displayAvatarURL(),
+        name: interaction.user.tag,
+      })
       .setDescription("Here are the available commands grouped by category:")
       .setColor(0x00ae86);
 
-    for (const [category, cmds] of commandMap) {
+    for (let [category, cmds] of commandMap) {
       embed.addFields({
         name: category,
-        value: cmds.join(", "),
-        inline: false,
+        value: cmds.map((cmd) => `\`${cmd}\``).join(", "),
+        inline: true,
       });
     }
 

@@ -2,7 +2,7 @@ import { SlashCommandBuilder } from "discord.js";
 import { Command } from "../../types/command";
 
 const PingCommand: Command = {
-  category: "Utility",
+  category: "⚙️  Utility",
   data: new SlashCommandBuilder()
     .setName("ping")
     .setDescription("Check bot latency"),

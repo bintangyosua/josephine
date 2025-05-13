@@ -4,6 +4,9 @@ import fs from "fs";
 import { ExtendedClient } from "../client/extended-client";
 import { Command } from "../types/command";
 import { config } from "../config";
+import chalk from "chalk";
+import CliTable3 from "cli-table3";
+import { logger } from "../utils/logger";
 
 export async function loadCommands(client: ExtendedClient) {
   const commands: Command[] = [];
@@ -25,21 +28,36 @@ export async function loadCommands(client: ExtendedClient) {
     }
   }
 
-  const rest = new REST({ version: "10" }).setToken(config.DISCORD_BOT_TOKEN);
-
-  console.log("📦 Loaded commands:");
-  commands.forEach((cmd) => {
-    console.log(
-      `- [${cmd.category}] /${cmd.data.name} → ${cmd.data.description}`
-    );
+  // 🔵 Create a CLI table
+  const table = new CliTable3({
+    head: [
+      chalk.blue("Category"),
+      chalk.green("Command"),
+      chalk.yellow("Description"),
+    ],
+    colWidths: [20, 20, 50],
+    wordWrap: true,
   });
 
+  commands.forEach((cmd) => {
+    table.push([
+      chalk.cyan(cmd.category),
+      chalk.green(`/${cmd.data.name}`),
+      chalk.white(cmd.data.description || "-"),
+    ]);
+  });
+
+  console.log(chalk.bold("\n📦 Loaded Commands:"));
+  console.log(table.toString());
+
+  const rest = new REST({ version: "10" }).setToken(config.DISCORD_BOT_TOKEN);
+
   try {
-    console.log("🔄 Registering slash commands...");
+    logger.info("Registering slash commands...");
     await rest.put(Routes.applicationCommands(config.DISCORD_CLIENT_ID), {
       body: commands.map((cmd) => cmd.data.toJSON()),
     });
-    console.log("✅ Slash commands registered!");
+    logger.info("Slash commands registered!");
   } catch (err) {
     console.error("❌ Failed to register commands:", err);
   }
