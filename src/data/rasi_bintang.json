@@ -1,0 +1,794 @@
+[
+  {
+    "Name": "Andromeda",
+    "Singkatan": "And",
+    "Genitif": "Andromedae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "putri Andromeda",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Andromeda_symbol_%28fixed_width%29.svg/20px-Andromeda_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Andromeda_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Antlia",
+    "Singkatan": "Ant",
+    "Genitif": "Antliae",
+    "Asal": "1763, Lacaille",
+    "Makna": "pompa air",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Antlia_symbol_%28fixed_width%29.svg/20px-Antlia_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Antlia_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Apus",
+    "Singkatan": "Aps",
+    "Genitif": "Apodis",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "cendrawasih",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Apus_symbol_%28fixed_width%29.svg/20px-Apus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Apus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Aquarius",
+    "Singkatan": "Aqr",
+    "Genitif": "Aquarii",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "pembawa air",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Aquarius_symbol_%28fixed_width%29.svg/20px-Aquarius_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Aquarius_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Aquila",
+    "Singkatan": "Aql",
+    "Genitif": "Aquilae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "elang",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Aquila_symbol_%28fixed_width%29.svg/20px-Aquila_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Aquila_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Ara",
+    "Singkatan": "Ara",
+    "Genitif": "Arae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "altar",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ara_symbol_%28fixed_width%29.svg/20px-Ara_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Ara_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Aries",
+    "Singkatan": "Ari",
+    "Genitif": "Arietis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "domba jantan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Aries_symbol_%28fixed_width%29.svg/20px-Aries_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Aries_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Auriga",
+    "Singkatan": "Aur",
+    "Genitif": "Aurigae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "sais kereta perang",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Auriga_symbol_%28fixed_width%29.svg/20px-Auriga_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Auriga_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Boötes",
+    "Singkatan": "Boo",
+    "Genitif": "Boötis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "penggembala",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Bootes_symbol_%28fixed_width%29.svg/20px-Bootes_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Bootes_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Caelum",
+    "Singkatan": "Cae",
+    "Genitif": "Caeli",
+    "Asal": "1763, Lacaille",
+    "Makna": "pahat",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Caelum_symbol_%28fixed_width%29.svg/20px-Caelum_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Caelum_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Camelopardalis",
+    "Singkatan": "Cam",
+    "Genitif": "Camelopardalis",
+    "Asal": "1624, Bartsch [3]",
+    "Makna": "jerapah",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Camelopardalis_symbol_%28fixed_width%29.svg/20px-Camelopardalis_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Camelopardalis_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Cancer",
+    "Singkatan": "Cnc",
+    "Genitif": "Cancri",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "ketam",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Cancer_symbol_%28fixed_width%29.svg/20px-Cancer_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Cancer_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Canes Venatici",
+    "Singkatan": "CVn",
+    "Genitif": "Canum Venaticorum",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "anjing-anjingpemburu",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Canes_Venatici_symbol_%28fixed_width%29.svg/20px-Canes_Venatici_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Canes_Venatici_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Canis Major",
+    "Singkatan": "CMa",
+    "Genitif": "Canis Majoris",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "anjing besar",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Canis_Major_symbol_%28fixed_width%29.svg/20px-Canis_Major_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Canis_Major_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Canis Minor",
+    "Singkatan": "CMi",
+    "Genitif": "Canis Minoris",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "anjing kecil",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Canis_Minor_symbol_%28fixed_width%29.svg/20px-Canis_Minor_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Canis_Minor_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Capricornus",
+    "Singkatan": "Cap",
+    "Genitif": "Capricorni",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "kambing laut",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Capricornus_symbol_%28fixed_width%29.svg/20px-Capricornus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Capricornus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Carina",
+    "Singkatan": "Car",
+    "Genitif": "Carinae",
+    "Asal": "1763, Lacaille , dipisahkan dari Argo Navis",
+    "Makna": "lunas kapal Argo",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Carina_symbol_%28fixed_width%29.svg/20px-Carina_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Carina_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Cassiopeia",
+    "Singkatan": "Cas",
+    "Genitif": "Cassiopeiae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "ratu Ethiopia",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Cassiopeia_symbol_%28fixed_width%29.svg/20px-Cassiopeia_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Cassiopeia_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Centaurus",
+    "Singkatan": "Cen",
+    "Genitif": "Centauri",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "Centaur",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Centaurus_symbol_%28fixed_width%29.svg/20px-Centaurus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Centaurus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Cepheus",
+    "Singkatan": "Cep",
+    "Genitif": "Cephei",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "raja Ethiopia",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Cepheus_symbol_%28fixed_width%29.svg/20px-Cepheus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Cepheus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Cetus",
+    "Singkatan": "Cet",
+    "Genitif": "Ceti",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "ikan paus",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Cetus_symbol_%28fixed_width%29.svg/20px-Cetus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Cetus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Chamaeleon",
+    "Singkatan": "Cha",
+    "Genitif": "Chamaeleontis",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "bunglon",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Chamaeleon_symbol_%28fixed_width%29.svg/20px-Chamaeleon_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Chamaeleon_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Circinus",
+    "Singkatan": "Cir",
+    "Genitif": "Circini",
+    "Asal": "1763, Lacaille",
+    "Makna": "kompas",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Circinus_symbol_%28fixed_width%29.svg/20px-Circinus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Circinus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Columba",
+    "Singkatan": "Col",
+    "Genitif": "Columbae",
+    "Asal": "1679 , Royer , dipisahkan dari Canis Major",
+    "Makna": "merpati",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Columba_symbol_%28fixed_width%29.svg/20px-Columba_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Columba_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Coma Berenices",
+    "Singkatan": "Com",
+    "Genitif": "Comae Berenices",
+    "Asal": "1603, Uranometria , dipisahkan dari Leo",
+    "Makna": "rambut Berenice",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Coma_Berenices_symbol_%28fixed_width%29.svg/20px-Coma_Berenices_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Coma_Berenices_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Corona Australis",
+    "Singkatan": "CrA",
+    "Genitif": "Coronae Australis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "mahkota selatan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Corona_Australis_symbol_%28fixed_width%29.svg/20px-Corona_Australis_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Corona_Australis_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Corona Borealis",
+    "Singkatan": "CrB",
+    "Genitif": "Coronae Borealis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "mahkota utara",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Corona_Borealis_symbol_%28fixed_width%29.svg/20px-Corona_Borealis_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Corona_Borealis_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Corvus",
+    "Singkatan": "Crv",
+    "Genitif": "Corvi",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "burung gagak",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Corvus_symbol_%28fixed_width%29.svg/20px-Corvus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Corvus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Crater",
+    "Singkatan": "Crt",
+    "Genitif": "Crateris",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "cangkir",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Crater_symbol_%28fixed_width%29.svg/20px-Crater_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Crater_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Crux",
+    "Singkatan": "Cru",
+    "Genitif": "Crucis",
+    "Asal": "1603, Uranometria , dipisahkan dari Centaurus",
+    "Makna": "salib selatan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Crux_symbol_%28fixed_width%29.svg/20px-Crux_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Crux_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Cygnus",
+    "Singkatan": "Cyg",
+    "Genitif": "Cygni",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "angsa",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Cygnus_symbol_%28fixed_width%29.svg/20px-Cygnus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Cygnus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Delphinus",
+    "Singkatan": "Del",
+    "Genitif": "Delphini",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "lumba-lumba",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Delphinus_symbol_%28fixed_width%29.svg/20px-Delphinus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Delphinus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Dorado",
+    "Singkatan": "Dor",
+    "Genitif": "Doradus",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "ikan todak",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Dorado_symbol_%28fixed_width%29.svg/20px-Dorado_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Dorado_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Draco",
+    "Singkatan": "Dra",
+    "Genitif": "Draconis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "naga",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Draco_symbol_%28fixed_width%29.svg/20px-Draco_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Draco_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Equuleus",
+    "Singkatan": "Equ",
+    "Genitif": "Equulei",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "kuda kecil",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Equuleus_symbol_%28fixed_width%29.svg/20px-Equuleus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Equuleus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Eridanus",
+    "Singkatan": "Eri",
+    "Genitif": "Eridani",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "sungai",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Eridanus_symbol_%28fixed_width%29.svg/20px-Eridanus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Eridanus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Fornax",
+    "Singkatan": "For",
+    "Genitif": "Fornacis",
+    "Asal": "1763, Lacaille",
+    "Makna": "tungku",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Fornax_symbol_%28fixed_width%29.svg/20px-Fornax_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Fornax_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Gemini",
+    "Singkatan": "Gem",
+    "Genitif": "Geminorum",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "kembar",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Gemini_symbol_%28fixed_width%29.svg/20px-Gemini_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Gemini_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Grus",
+    "Singkatan": "Gru",
+    "Genitif": "Gruis",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "burung bangau",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Grus_symbol_%28fixed_width%29.svg/20px-Grus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Grus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Hercules",
+    "Singkatan": "Her",
+    "Genitif": "Herculis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "Hercules,anak Zeus",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Hercules_symbol_%28fixed_width%29.svg/20px-Hercules_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Hercules_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Horologium",
+    "Singkatan": "Hor",
+    "Genitif": "Horologii",
+    "Asal": "1763, Lacaille",
+    "Makna": "jam",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Horologium_symbol_%28fixed_width%29.svg/20px-Horologium_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Horologium_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Hydra",
+    "Singkatan": "Hya",
+    "Genitif": "Hydrae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "naga laut",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Hydra_constellation_symbol_%28fixed_width%29.svg/20px-Hydra_constellation_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Hydra_constellation_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Hydrus",
+    "Singkatan": "Hyi",
+    "Genitif": "Hydri",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "ular air",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Hydrus_symbol_%28fixed_width%29.svg/20px-Hydrus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Hydrus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Indus",
+    "Singkatan": "Ind",
+    "Genitif": "Indi",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "Indian",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Indus_symbol_%28fixed_width%29.svg/20px-Indus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Indus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Lacerta",
+    "Singkatan": "Lac",
+    "Genitif": "Lacertae",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "kadal",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Lacerta_symbol_%28fixed_width%29.svg/20px-Lacerta_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Lacerta_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Leo",
+    "Singkatan": "Leo",
+    "Genitif": "Leonis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "singa",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Leo_symbol_%28fixed_width%29.svg/20px-Leo_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Leo_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Leo Minor",
+    "Singkatan": "LMi",
+    "Genitif": "Leonis Minoris",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "singa kecil",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Leo_Minor_symbol_%28fixed_width%29.svg/20px-Leo_Minor_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Leo_Minor_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Lepus",
+    "Singkatan": "Lep",
+    "Genitif": "Leporis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "kelinci",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Lepus_symbol_%28fixed_width%29.svg/20px-Lepus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Lepus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Libra",
+    "Singkatan": "Lib",
+    "Genitif": "Librae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "timbangan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Libra_symbol_%28fixed_width%29.svg/20px-Libra_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Libra_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Lupus",
+    "Singkatan": "Lup",
+    "Genitif": "Lupi",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "serigala",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lupus_symbol_%28fixed_width%29.svg/20px-Lupus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Lupus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Lynx",
+    "Singkatan": "Lyn",
+    "Genitif": "Lyncis",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "lynx",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lynx_symbol_%28fixed_width%29.svg/20px-Lynx_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Lynx_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Lyra",
+    "Singkatan": "Lyr",
+    "Genitif": "Lyrae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "sejenis kecapi",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Lyra_symbol_%28fixed_width%29.svg/20px-Lyra_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Lyra_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Mensa",
+    "Singkatan": "Men",
+    "Genitif": "Mensae",
+    "Asal": "1763, Lacaille",
+    "Makna": "meja",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mensa_symbol_%28fixed_width%29.svg/20px-Mensa_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Mensa_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Microscopium",
+    "Singkatan": "Mic",
+    "Genitif": "Microscopii",
+    "Asal": "1763, Lacaille",
+    "Makna": "mikroskop",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Microscopium_symbol_%28fixed_width%29.svg/20px-Microscopium_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Microscopium_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Monoceros",
+    "Singkatan": "Mon",
+    "Genitif": "Monocerotis",
+    "Asal": "1624, Bartsch",
+    "Makna": "kuda bertanduk",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Monoceros_symbol_%28fixed_width%29.svg/20px-Monoceros_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Monoceros_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Musca",
+    "Singkatan": "Mus",
+    "Genitif": "Muscae",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "lalat",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Musca_symbol_%28fixed_width%29.svg/20px-Musca_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Musca_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Norma",
+    "Singkatan": "Nor",
+    "Genitif": "Normae",
+    "Asal": "1763, Lacaille",
+    "Makna": "timbangan datar",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Norma_symbol_%28fixed_width%29.svg/20px-Norma_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Norma_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Octans",
+    "Singkatan": "Oct",
+    "Genitif": "Octantis",
+    "Asal": "1763, Lacaille",
+    "Makna": "oktan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Octans_symbol_%28fixed_width%29.svg/20px-Octans_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Octans_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Ophiuchus",
+    "Singkatan": "Oph",
+    "Genitif": "Ophiuchi",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "tangan naga",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ophiuchus_symbol_%28fixed_width%29.svg/20px-Ophiuchus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Ophiuchus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Orion",
+    "Singkatan": "Ori",
+    "Genitif": "Orionis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "pemburu",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Orion_symbol_%28fixed_width%29.svg/20px-Orion_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Orion_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Pavo",
+    "Singkatan": "Pav",
+    "Genitif": "Pavonis",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "merak",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Pavo_symbol_%28fixed_width%29.svg/20px-Pavo_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Pavo_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Pegasus",
+    "Singkatan": "Peg",
+    "Genitif": "Pegasi",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "kuda bersayap",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pegasus_symbol_%28fixed_width%29.svg/20px-Pegasus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Pegasus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Perseus",
+    "Singkatan": "Per",
+    "Genitif": "Persei",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "Perseus",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Perseus_symbol_%28fixed_width%29.svg/20px-Perseus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Perseus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Phoenix",
+    "Singkatan": "Phe",
+    "Genitif": "Phoenicis",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "Phoenix",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Phoenix_symbol_%28fixed_width%29.svg/20px-Phoenix_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Phoenix_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Pictor",
+    "Singkatan": "Pic",
+    "Genitif": "Pictoris",
+    "Asal": "1763, Lacaille",
+    "Makna": "kuda-kuda",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Pictor_symbol_%28fixed_width%29.svg/20px-Pictor_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Pictor_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Pisces",
+    "Singkatan": "Psc",
+    "Genitif": "Piscium",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "ikan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pisces_symbol_%28fixed_width%29.svg/20px-Pisces_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Pisces_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Piscis Austrinus",
+    "Singkatan": "PsA",
+    "Genitif": "Piscis Austrini",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "ikan selatan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Piscis_Austrinus_symbol_%28fixed_width%29.svg/20px-Piscis_Austrinus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Piscis_Austrinus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Puppis",
+    "Singkatan": "Pup",
+    "Genitif": "Puppis",
+    "Asal": "1763, Lacaille , dipisahkan dari Argo Navis",
+    "Makna": "buritan kapal Argo",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Puppis_symbol_%28fixed_width%29.svg/20px-Puppis_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Puppis_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Pyxis",
+    "Singkatan": "Pyx",
+    "Genitif": "Pyxidis",
+    "Asal": "1763, Lacaille",
+    "Makna": "kompas kapal Argo",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pyxis_symbol_%28fixed_width%29.svg/20px-Pyxis_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Pyxis_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Reticulum",
+    "Singkatan": "Ret",
+    "Genitif": "Reticuli",
+    "Asal": "1763, Lacaille",
+    "Makna": "jaring",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Reticulum_symbol_%28fixed_width%29.svg/20px-Reticulum_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Reticulum_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Sagitta",
+    "Singkatan": "Sge",
+    "Genitif": "Sagittae",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "anak panah",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Sagitta_symbol_%28fixed_width%29.svg/20px-Sagitta_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Sagitta_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Sagittarius",
+    "Singkatan": "Sgr",
+    "Genitif": "Sagittarii",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "pemanah",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Sagittarius_symbol_%28fixed_width%29.svg/20px-Sagittarius_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Sagittarius_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Scorpius",
+    "Singkatan": "Sco",
+    "Genitif": "Scorpii",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "kalajengking",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Scorpius_symbol_%28fixed_width%29.svg/20px-Scorpius_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Scorpius_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Sculptor",
+    "Singkatan": "Scl",
+    "Genitif": "Sculptoris",
+    "Asal": "1763, Lacaille",
+    "Makna": "alat pemahat",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Sculptor_symbol_%28fixed_width%29.svg/20px-Sculptor_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Sculptor_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Scutum",
+    "Singkatan": "Sct",
+    "Genitif": "Scuti",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "perisai",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Scutum_symbol_%28fixed_width%29.svg/20px-Scutum_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Scutum_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Serpens",
+    "Singkatan": "Ser",
+    "Genitif": "Serpentis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "ular",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Serpens_symbol_%28fixed_width%29.svg/20px-Serpens_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Serpens_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Sextans",
+    "Singkatan": "Sex",
+    "Genitif": "Sextantis",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "sekstan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sextans_symbol_%28fixed_width%29.svg/20px-Sextans_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Sextans_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Taurus",
+    "Singkatan": "Tau",
+    "Genitif": "Tauri",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "lembu jantan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Taurus_symbol_%28fixed_width%29.svg/20px-Taurus_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Taurus_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Telescopium",
+    "Singkatan": "Tel",
+    "Genitif": "Telescopii",
+    "Asal": "1763, Lacaille",
+    "Makna": "teleskop",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Telescopium_symbol_%28fixed_width%29.svg/20px-Telescopium_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Telescopium_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Triangulum",
+    "Singkatan": "Tri",
+    "Genitif": "Trianguli",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "segitiga",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Triangulum_symbol_%28fixed_width%29.svg/20px-Triangulum_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Triangulum_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Triangulum Australe",
+    "Singkatan": "TrA",
+    "Genitif": "Trianguli Australis",
+    "Asal": "1603 Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "segitiga selatan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Triangulum_Australe_symbol_%28fixed_width%29.svg/20px-Triangulum_Australe_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Triangulum_Australe_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Tucana",
+    "Singkatan": "Tuc",
+    "Genitif": "Tucanae",
+    "Asal": "1603 Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "burung tukan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Tucana_symbol_%28fixed_width%29.svg/20px-Tucana_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Tucana_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Ursa Major",
+    "Singkatan": "UMa",
+    "Genitif": "Ursae Majoris",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "beruang besar",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Ursa_Major_symbol_%28fixed_width%29.svg/20px-Ursa_Major_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Ursa_Major_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Ursa Minor",
+    "Singkatan": "UMi",
+    "Genitif": "Ursae Minoris",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "beruang kecil",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ursa_Minor_symbol_%28fixed_width%29.svg/20px-Ursa_Minor_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Ursa_Minor_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Vela",
+    "Singkatan": "Vel",
+    "Genitif": "Velorum",
+    "Asal": "1763, Lacaille , dipisahkan dari Argo Navis",
+    "Makna": "layar kapal Argo",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Vela_symbol_%28fixed_width%29.svg/20px-Vela_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Vela_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Virgo",
+    "Singkatan": "Vir",
+    "Genitif": "Virginis",
+    "Asal": "Yunani kuno ( Ptolemaeus )",
+    "Makna": "sang perawan",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Virgo_symbol_%28fixed_width%29.svg/20px-Virgo_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Virgo_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Volans",
+    "Singkatan": "Vol",
+    "Genitif": "Volantis",
+    "Asal": "1603, Uranometria , ciptaan Keyser dan de Houtman",
+    "Makna": "ikan terbang",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Volans_symbol_%28fixed_width%29.svg/20px-Volans_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Volans_symbol_(fixed_width).svg"
+  },
+  {
+    "Name": "Vulpecula",
+    "Singkatan": "Vul",
+    "Genitif": "Vulpeculae",
+    "Asal": "1690, Firmamentum Sobiescianum , Hevelius",
+    "Makna": "rubah",
+    "Simbol_img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Vulpecula_symbol_%28fixed_width%29.svg/20px-Vulpecula_symbol_%28fixed_width%29.svg.png",
+    "Simbol_svg": "https://upload.wikimedia.org/wikipedia/commons/Vulpecula_symbol_(fixed_width).svg"
+  }
+]
