@@ -26,7 +26,6 @@ const Trivia = {
         const collector = interaction.channel?.createMessageComponentCollector({
             componentType: discord_js_1.ComponentType.Button,
             time: 15000,
-            max: 1,
         });
         collector?.on("collect", async (i) => {
             if (i.user.id !== interaction.user.id) {

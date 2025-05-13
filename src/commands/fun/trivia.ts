@@ -41,7 +41,6 @@ const Trivia: Command = {
     const collector = interaction.channel?.createMessageComponentCollector({
       componentType: ComponentType.Button,
       time: 15000,
-      max: 1,
     });
 
     collector?.on("collect", async (i) => {
