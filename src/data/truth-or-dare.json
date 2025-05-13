@@ -1,0 +1,532 @@
+[
+  {
+    "id": 1,
+    "question_content": "Acara TV apa yang paling tidak kamu sukai dan Beri tahu alasannya!",
+    "category": "truth"
+  },
+  {
+    "id": 2,
+    "question_content": "Kapan terakhir kali kamu berbohong? Dan apa kebohongan tersebut!",
+    "category": "truth"
+  },
+  {
+    "id": 3,
+    "question_content": "Kapan terakhir kali kamu menangis? Dan apa yang menjadi penyebabnya",
+    "category": "truth"
+  },
+  {
+    "id": 4,
+    "question_content": "Kapan terakhir kali kamu kentut?",
+    "category": "truth"
+  },
+  {
+    "id": 5,
+    "question_content": "Apa ketakutan terbesar yang kamu miliki?",
+    "category": "truth"
+  },
+  {
+    "id": 6,
+    "question_content": "Apa fantasi terbesar atau teraneh yang kamu miliki?",
+    "category": "truth"
+  },
+  {
+    "id": 7,
+    "question_content": "Apa hal yang membuatmu merasa senang namun orang tuamu tidak mengetahuinya?",
+    "category": "truth"
+  },
+  {
+    "id": 8,
+    "question_content": "Pernahkah kamu diselingkuhi? Kapan dan oleh mantan yang keberapa?",
+    "category": "truth"
+  },
+  {
+    "id": 9,
+    "question_content": "Hal terburuk apa yang pernah kamu lakukan? Apakah berdampak ke orang lain?",
+    "category": "truth"
+  },
+  {
+    "id": 10,
+    "question_content": "Apa rahasia yang belum pernah kamu ceritakan kepada siapapun?",
+    "category": "truth"
+  },
+  {
+    "id": 11,
+    "question_content": "Apakah kamu memiliki bakat terpendam? Apa Itu?",
+    "category": "truth"
+  },
+  {
+    "id": 12,
+    "question_content": "Siapa selebriti yang pertama membuatmu jatuh cinta?",
+    "category": "truth"
+  },
+  {
+    "id": 13,
+    "question_content": "Apa pendapatmu mengenai perselingkuhan yang dilakukan seseorang?",
+    "category": "truth"
+  },
+  {
+    "id": 14,
+    "question_content": "Apa pengalaman intim terburuk yang pernah kamu alami?",
+    "category": "truth"
+  },
+  {
+    "id": 15,
+    "question_content": "Apakah kamu pernah melanggar hukum? Kemudian hukum seperti apa yang kamu langgar?",
+    "category": "truth"
+  },
+  {
+    "id": 16,
+    "question_content": "Hal apa yang paling memalukan yang pernah kamu lakukan? Serta kapan kamu melakukannya?",
+    "category": "truth"
+  },
+  {
+    "id": 17,
+    "question_content": "Hal apa yang paling membuatmu merasa insecure? Dan mengapa demikian?",
+    "category": "truth"
+  },
+  {
+    "id": 18,
+    "question_content": "Apa Kesalahan terburuk yang pernah kamu lakukan?",
+    "category": "truth"
+  },
+  {
+    "id": 19,
+    "question_content": "Hal paling menjijikkan apa yang pernah kamu lakukan?",
+    "category": "truth"
+  },
+  {
+    "id": 20,
+    "question_content": "Siapa orang yang paling ingin kamu cium di antara kita?",
+    "category": "truth"
+  },
+  {
+    "id": 21,
+    "question_content": "Hal terburuk apa yang pernah dilakukan orang lain kepadamu?",
+    "category": "truth"
+  },
+  {
+    "id": 22,
+    "question_content": "Apa kebiasaan terburukmu? Sebutkan tiga diantaranya",
+    "category": "truth"
+  },
+  {
+    "id": 23,
+    "question_content": "Apa penyesalan terburuk yang kamu miliki?",
+    "category": "truth"
+  },
+  {
+    "id": 24,
+    "question_content": "Kenapa kamu putus dengan mantanmu yang sebelumnya? Jabarkan alasannya",
+    "category": "truth"
+  },
+  {
+    "id": 25,
+    "question_content": "Jika kamu bisa menjadi tidak terlihat, hal pertama apa yang akan kamu lakukan?",
+    "category": "truth"
+  },
+  {
+    "id": 26,
+    "question_content": "Apa rahasia yang kamu sembunyikan dari orang tuamu?",
+    "category": "truth"
+  },
+  {
+    "id": 27,
+    "question_content": "Hadiah termurah yang pernah kamu berikan untuk orang lain? Dan kepada siapa kado itu diberikan?",
+    "category": "truth"
+  },
+  {
+    "id": 28,
+    "question_content": "Hal tergila apa yang pernah kamu lakukan untuk bisa bebas dari tilang polisi?",
+    "category": "truth"
+  },
+  {
+    "id": 29,
+    "question_content": "Hal terkejam apa yang pernah kamu lakukan atau katakan kepada pasanganmu?",
+    "category": "truth"
+  },
+  {
+    "id": 30,
+    "question_content": "Hal terkejam apa yang pernah kamu ungkapkan kepada orang lain?",
+    "category": "truth"
+  },
+  {
+    "id": 31,
+    "question_content": "Hal terkejam apa yang pernah kamu katakan tentang orang lain?",
+    "category": "truth"
+  },
+  {
+    "id": 32,
+    "question_content": "Apa hal paling kekanak-kanakan yang masih kamu lakukan hingga saat ini?",
+    "category": "truth"
+  },
+  {
+    "id": 33,
+    "question_content": "Apa Hal paling memalukan yang pernah kamu posting di media sosial?",
+    "category": "truth"
+  },
+  {
+    "id": 34,
+    "question_content": "Apa Hal paling menakutkan yang pernah kamu lakukan?",
+    "category": "truth"
+  },
+  {
+    "id": 35,
+    "question_content": "Apa Hal paling menakutkan yang pernah terjadi padamu?",
+    "category": "truth"
+  },
+  {
+    "id": 36,
+    "question_content": "Apa Hal paling menjijikkan yang pernah kamu lakukan sendirian?",
+    "category": "truth"
+  },
+  {
+    "id": 37,
+    "question_content": "Hal terakhir yang kamu cari di Google? Tunjukan!",
+    "category": "truth"
+  },
+  {
+    "id": 38,
+    "question_content": "Hal teraneh apa yang pernah kamu lakukan saat mengemudi?",
+    "category": "truth"
+  },
+  {
+    "id": 39,
+    "question_content": "Siapa orang yang diam-diam sedang kamu sukai?",
+    "category": "truth"
+  },
+  {
+    "id": 40,
+    "question_content": "Siapa orang terakhir yang sedang kamu kepoin di media sosial?",
+    "category": "truth"
+  },
+  {
+    "id": 41,
+    "question_content": "Apa tontonan favorit saat masih kecil? Sebutkan tiga diantaranya",
+    "category": "truth"
+  },
+  {
+    "id": 42,
+    "question_content": "Siapa orang yang paling sering kamu chat? Sebut orangnya",
+    "category": "truth"
+  },
+  {
+    "id": 43,
+    "question_content": "Apa kebohongan terbesar yang pernah kamu ucapkan kepada kedua orang tuamu?",
+    "category": "truth"
+  },
+  {
+    "id": 44,
+    "question_content": "Apa mimpi teraneh yang pernah kamu alami? ceritakan",
+    "category": "truth"
+  },
+  {
+    "id": 45,
+    "question_content": "Ceritakan detail ciuman pertamamu…",
+    "category": "truth"
+  },
+  {
+    "id": 46,
+    "question_content": "Kapan terakhir kali kamu ngompol?",
+    "category": "truth"
+  },
+  {
+    "id": 47,
+    "question_content": "Menurutmu, hewan apa yang terlihat paling mirip denganmu? Sebutkan tiga!",
+    "category": "truth"
+  },
+  {
+    "id": 48,
+    "question_content": "Di antara semua orang di ruangan ini siapa yang paling kamu suka dalam konteks romantis?",
+    "category": "truth"
+  },
+  {
+    "id": 49,
+    "question_content": "Siapa mantan terindahmu? Sebutkan namanya",
+    "category": "truth"
+  },
+  {
+    "id": 50,
+    "question_content": "Siapa orang yang ingin kamu jadikan istri atau suami?",
+    "category": "truth"
+  },
+  {
+    "id": 51,
+    "question_content": "Apakah kamu pernah melakukan ghosting kepada seseorang?",
+    "category": "truth"
+  },
+  {
+    "id": 52,
+    "question_content": "Apa ada aib yang kamu sembunyikan dari kami?",
+    "category": "truth"
+  },
+  {
+    "id": 53,
+    "question_content": "Berapa jumlah mantanmu? Sebutkan semua namanya",
+    "category": "truth"
+  },
+  {
+    "id": 54,
+    "question_content": "Siapa nih crush rahasia kamu?",
+    "category": "truth"
+  },
+  {
+    "id": 55,
+    "question_content": "Punya berapa crush selama hidup? Sebut namanya",
+    "category": "truth"
+  },
+  {
+    "id": 56,
+    "question_content": "Tiga hal apa yang harus gebetan atau pacarmu punya? Apa saja itu, sebutkan!",
+    "category": "truth"
+  },
+  {
+    "id": 57,
+    "question_content": "Di antara pemain, siapa yang paling dekat atau paling tahu banyak tentangmu?",
+    "category": "truth"
+  },
+  {
+    "id": 58,
+    "question_content": "First impression tentang (nama orang)?",
+    "category": "truth"
+  },
+  {
+    "id": 59,
+    "question_content": "Baca atau buatlah puisi dengan tema (alam/cinta/sesuatu yang absurd) selama kurun waktu dua menit kemudian bacakan.",
+    "category": "dare"
+  },
+  {
+    "id": 60,
+    "question_content": "Berikan akun Instagrammu ke (nama orang) selama 30 menit.",
+    "category": "dare"
+  },
+  {
+    "id": 61,
+    "question_content": "Izinkan (nama orang) untuk mengatur gaya rambutmu.",
+    "category": "dare"
+  },
+  {
+    "id": 62,
+    "question_content": "Izinkan (nama orang) untuk mengatur ulang make-up di wajahmu",
+    "category": "dare"
+  },
+  {
+    "id": 63,
+    "question_content": "Kamu harus menuruti semua perkataan (nama orang) dalam kurun waktu 20 menit ke depan.",
+    "category": "dare"
+  },
+  {
+    "id": 64,
+    "question_content": "Ulangi apa yang dikatakan orang yang ada di sampingmu hingga kamu mendapat giliran lagi.",
+    "category": "dare"
+  },
+  {
+    "id": 65,
+    "question_content": "Keluarkan semua isi tas, kantiong, dompet, dan semua bawaan.",
+    "category": "dare"
+  },
+  {
+    "id": 66,
+    "question_content": "Panggill orang yang dipilih sama (nama orang) kemudian nyanyikan lagu Happy Birthday tapi dibalik",
+    "category": "dare"
+  },
+  {
+    "id": 67,
+    "question_content": "Panggil orang yang sudah taken kemudian katakan bahwa kamu tertarik kepada pasangannya.",
+    "category": "dare"
+  },
+  {
+    "id": 68,
+    "question_content": "Publish karya apapun yang pernah kamu buat langsung saat itu juga ke halaman InstaStory.",
+    "category": "dare"
+  },
+  {
+    "id": 69,
+    "question_content": "Tirulah gaya YouTuber atau TikTok hingga akhirnya bisa ditebak oleh orang lain.",
+    "category": "dare"
+  },
+  {
+    "id": 70,
+    "question_content": "Cobalah salah satu tren TikTok ataupun dance TikTok serta upload ke InstaStory.",
+    "category": "dare"
+  },
+  {
+    "id": 71,
+    "question_content": "Buat tato dengan menggunakan spidol permanen di area tubuh yang terlihat.",
+    "category": "dare"
+  },
+  {
+    "id": 72,
+    "question_content": "Tunjukkan liked videos di TikTok ataupun post yang disukai di Instagram.",
+    "category": "dare"
+  },
+  {
+    "id": 73,
+    "question_content": "Tunjukkan juga daftar chat terakhir di WhatsApp atau LINE.",
+    "category": "dare"
+  },
+  {
+    "id": 74,
+    "question_content": "Tunjukkan history dari browser ponsel atau laptop dan smartphone mu.",
+    "category": "dare"
+  },
+  {
+    "id": 75,
+    "question_content": "Tunjukkan history pencarian pada halaman Instagram atau TikTok atau LINE.",
+    "category": "dare"
+  },
+  {
+    "id": 76,
+    "question_content": "Tunjukkan foto-foto maupun video terbaru di galeri handphone mu.",
+    "category": "dare"
+  },
+  {
+    "id": 77,
+    "question_content": "Push-up lah sebanyak satu kali setiap ada orang yang bilang “aku” selama 10 menit ke depan.",
+    "category": "dare"
+  },
+  {
+    "id": 78,
+    "question_content": "Makanlah sayur-sayuran mentah pertama yang terlihat di kulkas.",
+    "category": "dare"
+  },
+  {
+    "id": 79,
+    "question_content": "Checkoutkan satu barang dengan budget maksimal (di suatu nominal tertentu) dari keranjang Shopee atau Tokopedia (nama orang).",
+    "category": "dare"
+  },
+  {
+    "id": 80,
+    "question_content": "GoFood/GrabFoodlah apapun yang (nama orang) mau.",
+    "category": "dare"
+  },
+  {
+    "id": 81,
+    "question_content": "Beli subscription baik itu Netflix ataupun Spotify untuk nama orang.",
+    "category": "dare"
+  },
+  {
+    "id": 82,
+    "question_content": "Kirim e-money (baik itu OVO/GoPay/Dana) kepada orang di ruangan, dan pilih secara random.",
+    "category": "dare"
+  },
+  {
+    "id": 83,
+    "question_content": "Makanlah satu gigitan kulit pisang.",
+    "category": "dare"
+  },
+  {
+    "id": 84,
+    "question_content": "Katakan ‘meong’ pada setiap akhir kalimat hingga tiba di giliranmu yang selanjutnya.",
+    "category": "dare"
+  },
+  {
+    "id": 85,
+    "question_content": "Tirukan seorang selebriti hingga ada yang dapat menebak siapa seleb yang kamu tirukan",
+    "category": "dare"
+  },
+  {
+    "id": 86,
+    "question_content": "Bertingkahlah seperti ayam hingga giliranmu yang selanjutnya.",
+    "category": "dare"
+  },
+  {
+    "id": 87,
+    "question_content": "Biarkan salah satu orang menggambar tato di wajahmu.",
+    "category": "dare"
+  },
+  {
+    "id": 88,
+    "question_content": "Gunakan penutup mata kemudian raba wajah salah satu di antara kalian hingga kamu dapat menebak siapa orang itu.",
+    "category": "dare"
+  },
+  {
+    "id": 89,
+    "question_content": "Segera ungkapkan perasaanmu kepada gebetan.",
+    "category": "dare"
+  },
+  {
+    "id": 90,
+    "question_content": "Lakukan gerakan push up sebanyak 20 kali.",
+    "category": "dare"
+  },
+  {
+    "id": 91,
+    "question_content": "Lakukan gerakan kayang selama kurang lebih satu menit.",
+    "category": "dare"
+  },
+  {
+    "id": 92,
+    "question_content": "Lakukan Gerakan Plank selama kurang lebih satu menit.",
+    "category": "dare"
+  },
+  {
+    "id": 93,
+    "question_content": "Biarkan salah satu di antara kalian saling merias wajah dengan menggunakan make up.",
+    "category": "dare"
+  },
+  {
+    "id": 94,
+    "question_content": "Bacalah dengan lantang pesan-pesan terakhir kali kamu kirim ke gebetan.",
+    "category": "dare"
+  },
+  {
+    "id": 95,
+    "question_content": "Telepon seorang teman kemudian katakan kepadanya selamat ulang tahun sambil menyanyikan lagu ulang tahun",
+    "category": "dare"
+  },
+  {
+    "id": 96,
+    "question_content": "Ayo bangun dan tunjukkan gerakan dance terbaikmu, unggah di instagram",
+    "category": "dare"
+  },
+  {
+    "id": 97,
+    "question_content": "Ulangi setiap perkataan orang yang ada di sampingmu hingga sampai kepada giliranmu yang selanjutnya.",
+    "category": "dare"
+  },
+  {
+    "id": 98,
+    "question_content": "Telepon orang yang ada di kontak HP secara random kemudian nyanyikan lagu terakhir yang sedang kamu dengarkan.",
+    "category": "dare"
+  },
+  {
+    "id": 99,
+    "question_content": "Pesan makanan secara online kemudian buat pesanan ini diberikan kepada sopir yang menerima pesanan yang telah kamu bayar.",
+    "category": "dare"
+  },
+  {
+    "id": 100,
+    "question_content": "Buatlah story dengan menggunakan filter yang paling tidak kamu sukai di halaman Instagram.",
+    "category": "dare"
+  },
+  {
+    "id": 101,
+    "question_content": "Rekam suaramu saat kamu sedang bernyanyi lagu kesukaan kemudian unggah di Instagram tanpa di edit secara langsung.",
+    "category": "dare"
+  },
+  {
+    "id": 102,
+    "question_content": "Buat salah satu TikTok challenge yang sedang viral dan unggah secara langsung.",
+    "category": "dare"
+  },
+  {
+    "id": 103,
+    "question_content": "Unggahlah salah satu foto yang paling kamu sukai dari gebetan",
+    "category": "dare"
+  },
+  {
+    "id": 104,
+    "question_content": "Teleponlah orangtua kemudian sampaikan kepadanya bahwa kamu merindukannya",
+    "category": "dare"
+  },
+  {
+    "id": 105,
+    "question_content": "Kirimlah pesan secara random kepada salah satu followers akun Instagram yang dipilih secara random juga sebelumnya.",
+    "category": "dare"
+  },
+  {
+    "id": 106,
+    "question_content": "Bernyanyilah RAP selama tiga menit tanpa ada jeda.",
+    "category": "dare"
+  }
+]
