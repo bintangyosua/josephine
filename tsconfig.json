@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Versi JavaScript output
+    "module": "CommonJS", // Agar cocok untuk Node.js
+    "strict": true, // Aktifkan type-checking yang ketat
+    "esModuleInterop": true, // Agar bisa import package dengan `import ... from ...`
+    "forceConsistentCasingInFileNames": true, // Hindari masalah huruf besar/kecil lintas OS
+    "skipLibCheck": true, // Lewati pengecekan file di node_modules
+    "outDir": "./dist", // Tempat hasil compile
+    "moduleResolution": "node", // Resolusi modul Node.js
+    "resolveJsonModule": true // Jika kamu ingin import file JSON
+  },
+  "include": ["src/**/*.ts"], // Hanya file .ts di root folder
+  "exclude": ["node_modules"] // Abaikan node_modules
+}
