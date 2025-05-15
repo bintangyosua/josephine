@@ -1,8 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.decodeHTML = decodeHTML;
 const discord_js_1 = require("discord.js");
 const fun_1 = require("../../lib/api/fun");
+const he_1 = __importDefault(require("he"));
 const Trivia = {
     category: "🎉 Fun",
     data: new discord_js_1.SlashCommandBuilder()
@@ -12,9 +16,9 @@ const Trivia = {
         // Ambil data trivia dari API
         const data = await fun_1.funServices.getTrivia();
         const trivia = data.results[0];
-        const question = decodeHTML(trivia.question);
-        const correct = decodeHTML(trivia.correct_answer);
-        const options = [...trivia.incorrect_answers.map(decodeHTML), correct].sort(() => Math.random() - 0.5);
+        const question = he_1.default.decode(trivia.question);
+        const correct = he_1.default.decode(trivia.correct_answer);
+        const options = [...trivia.incorrect_answers.map(he_1.default.decode), correct].sort(() => Math.random() - 0.5);
         const buttons = options.map((opt) => new discord_js_1.ButtonBuilder()
             .setCustomId(opt)
             .setLabel(opt)

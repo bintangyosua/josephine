@@ -21,6 +21,15 @@ const Trivia2: Command = {
     .addSubcommand((option) => option.setName("game").setDescription("Game"))
     .addSubcommand((option) => option.setName("movie").setDescription("Movie"))
     .addSubcommand((option) =>
+      option.setName("gadgets").setDescription("Gadgets")
+    )
+    .addSubcommand((option) =>
+      option.setName("geo").setDescription("Geography")
+    )
+    .addSubcommand((option) =>
+      option.setName("compsci").setDescription("Computer Science")
+    )
+    .addSubcommand((option) =>
       option.setName("politics").setDescription("Politics")
     )
     .addSubcommand((option) =>
@@ -45,6 +54,15 @@ const Trivia2: Command = {
         break;
       case "history":
         categoryId = 23;
+        break;
+      case "compsci":
+        categoryId = 18;
+        break;
+      case "geo":
+        categoryId = 22;
+        break;
+      case "gadgets":
+        categoryId = 30;
         break;
       default:
         categoryId = 9;

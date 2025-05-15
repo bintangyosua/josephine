@@ -1,9 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
 const opentdb_1 = require("../../lib/api/opentdb");
-const trivia_1 = require("./trivia");
 const helpers_1 = require("../../lib/helpers");
+const he_1 = __importDefault(require("he"));
 const Trivia2 = {
     category: "🎉 Fun",
     data: new discord_js_1.SlashCommandBuilder()
@@ -40,9 +43,9 @@ const Trivia2 = {
         const level = ["easy", "medium", "hard"][Math.floor(Math.random() * 3)];
         const response = await opentdb_1.opentdbService.getQuestion(1, categoryId, level, "multiple");
         const trivia = response.results[0];
-        const question = (0, trivia_1.decodeHTML)(trivia.question);
-        const correct = (0, trivia_1.decodeHTML)(trivia.correct_answer);
-        const options = [...trivia.incorrect_answers.map(trivia_1.decodeHTML), correct].sort(() => Math.random() - 0.5);
+        const question = he_1.default.decode(trivia.question);
+        const correct = he_1.default.decode(trivia.correct_answer);
+        const options = [...trivia.incorrect_answers.map(he_1.default.decode), correct].sort(() => Math.random() - 0.5);
         const buttons = options.map((opt) => new discord_js_1.ButtonBuilder()
             .setCustomId(opt)
             .setLabel(opt)
