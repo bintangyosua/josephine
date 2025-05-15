@@ -8,6 +8,7 @@ import {
 import { Command } from "../../types/command";
 import { funServices } from "../../lib/api/fun";
 import { capitalize } from "../../lib/helpers";
+import he from "he";
 
 const Trivia: Command = {
   category: "🎉 Fun",
@@ -19,9 +20,9 @@ const Trivia: Command = {
     const data = await funServices.getTrivia();
 
     const trivia = data.results[0];
-    const question = decodeHTML(trivia.question);
-    const correct = decodeHTML(trivia.correct_answer);
-    const options = [...trivia.incorrect_answers.map(decodeHTML), correct].sort(
+    const question = he.decode(trivia.question);
+    const correct = he.decode(trivia.correct_answer);
+    const options = [...trivia.incorrect_answers.map(he.decode), correct].sort(
       () => Math.random() - 0.5
     );
 

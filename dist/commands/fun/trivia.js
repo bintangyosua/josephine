@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.decodeHTML = decodeHTML;
 const discord_js_1 = require("discord.js");
 const fun_1 = require("../../lib/api/fun");
 const Trivia = {
@@ -27,6 +28,7 @@ const Trivia = {
             componentType: discord_js_1.ComponentType.Button,
             time: 15000,
         });
+        let answered = false;
         collector?.on("collect", async (i) => {
             if (i.user.id !== interaction.user.id) {
                 return i.reply({
@@ -35,6 +37,8 @@ const Trivia = {
                 });
             }
             const selectedLabel = i.customId;
+            answered = true;
+            collector.stop();
             const optionText = options
                 .map((opt) => {
                 const isCorrect = opt === correct;
@@ -51,6 +55,25 @@ const Trivia = {
                 content: `🧠 **Trivia:** ${question}\n\n${optionText}\n\n${resultText}`,
                 components: [],
             });
+        });
+        collector?.on("end", async (_, reason) => {
+            if (answered)
+                return;
+            try {
+                const disabledButtons = options.map((opt) => new discord_js_1.ButtonBuilder()
+                    .setCustomId(opt)
+                    .setLabel(opt)
+                    .setStyle(discord_js_1.ButtonStyle.Primary)
+                    .setDisabled(true));
+                const disabledRow = new discord_js_1.ActionRowBuilder().addComponents(disabledButtons);
+                await interaction.editReply({
+                    content: `🧠 **Trivia:**\n\n${question}\n\n⏰ Waktu habis! Kamu tidak menjawab tepat waktu.`,
+                    components: [disabledRow],
+                });
+            }
+            catch (error) {
+                console.error("Gagal edit karena interaksi tidak valid lagi:", error);
+            }
         });
     },
 };

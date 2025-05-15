@@ -10,6 +10,7 @@ import { funServices } from "../../lib/api/fun";
 import { opentdbService } from "../../lib/api/opentdb";
 import { decodeHTML } from "./trivia";
 import { capitalize } from "../../lib/helpers";
+import he from "he";
 
 const Trivia2: Command = {
   category: "🎉 Fun",
@@ -60,9 +61,9 @@ const Trivia2: Command = {
     );
 
     const trivia = response.results[0];
-    const question = decodeHTML(trivia.question);
-    const correct = decodeHTML(trivia.correct_answer);
-    const options = [...trivia.incorrect_answers.map(decodeHTML), correct].sort(
+    const question = he.decode(trivia.question);
+    const correct = he.decode(trivia.correct_answer);
+    const options = [...trivia.incorrect_answers.map(he.decode), correct].sort(
       () => Math.random() - 0.5
     );
 
