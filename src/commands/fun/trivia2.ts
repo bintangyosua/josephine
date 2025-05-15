@@ -7,18 +7,59 @@ import {
 } from "discord.js";
 import { Command } from "../../types/command";
 import { funServices } from "../../lib/api/fun";
+import { opentdbService } from "../../lib/api/opentdb";
+import { decodeHTML } from "./trivia";
 import { capitalize } from "../../lib/helpers";
 
-const Trivia: Command = {
+const Trivia2: Command = {
   category: "🎉 Fun",
   data: new SlashCommandBuilder()
-    .setName("trivia")
-    .setDescription("Replies with a random trivia"),
+    .setName("trivia2")
+    .setDescription("Random Trivia")
+    .addSubcommand((option) => option.setName("anime").setDescription("Anime"))
+    .addSubcommand((option) => option.setName("game").setDescription("Game"))
+    .addSubcommand((option) => option.setName("movie").setDescription("Movie"))
+    .addSubcommand((option) =>
+      option.setName("politics").setDescription("Politics")
+    )
+    .addSubcommand((option) =>
+      option.setName("history").setDescription("History")
+    ),
   async execute(interaction) {
-    // Ambil data trivia dari API
-    const data = await funServices.getTrivia();
+    const category = interaction.options.getSubcommand();
 
-    const trivia = data.results[0];
+    let categoryId;
+    switch (category) {
+      case "anime":
+        categoryId = 31;
+        break;
+      case "game":
+        categoryId = 15;
+        break;
+      case "movie":
+        categoryId = 11;
+        break;
+      case "politics":
+        categoryId = 24;
+        break;
+      case "history":
+        categoryId = 23;
+        break;
+      default:
+        categoryId = 9;
+        break;
+    }
+
+    const level = ["easy", "medium", "hard"][Math.floor(Math.random() * 3)];
+
+    const response = await opentdbService.getQuestion(
+      1,
+      categoryId,
+      level as any,
+      "multiple"
+    );
+
+    const trivia = response.results[0];
     const question = decodeHTML(trivia.question);
     const correct = decodeHTML(trivia.correct_answer);
     const options = [...trivia.incorrect_answers.map(decodeHTML), correct].sort(
@@ -35,7 +76,9 @@ const Trivia: Command = {
     const row = new ActionRowBuilder<ButtonBuilder>().addComponents(buttons);
 
     await interaction.reply({
-      content: `🧠 **Trivia:** ${question}`,
+      content: `🧠 **${capitalize(
+        category
+      )} Trivia:**\nDifficulty: ${capitalize(level)}\n\n ${question}\n`,
       components: [row],
     });
 
@@ -54,31 +97,37 @@ const Trivia: Command = {
         });
       }
 
-      const selectedLabel = i.customId;
+      const selected = i.customId;
       answered = true;
       collector.stop();
 
-      const optionText = options
+      const feedback = options
         .map((opt) => {
           const isCorrect = opt === correct;
-          const isChosen = opt === selectedLabel;
+          const isChosen = opt === selected;
 
-          const left = isChosen ? "❌" : "▫️";
+          const left = isChosen ? (isCorrect ? "🎯" : "❌") : "▫️";
           const right = isCorrect ? "✅" : "";
 
           return `${left} ${opt} ${right}`;
         })
         .join("\n");
 
-      const resultText =
-        selectedLabel === correct
+      const result =
+        selected === correct
           ? "🎉 Jawaban kamu **benar**!"
-          : `😔 Jawaban kamu **salah**.`;
+          : `😔 Jawaban kamu **salah**. Jawaban yang benar adalah **${correct}**.`;
 
       await i.update({
-        content: `🧠 **Trivia:** ${question}\n\n${optionText}\n\n${resultText}`,
+        content: `🧠 **${capitalize(
+          category
+        )} Trivia:**\nDifficulty: ${capitalize(
+          level
+        )}\n\n ${question}\n\n${feedback}\n\n${result}`,
         components: [],
       });
+
+      return;
     });
 
     collector?.on("end", async (_, reason) => {
@@ -98,7 +147,11 @@ const Trivia: Command = {
         );
 
         await interaction.editReply({
-          content: `🧠 **Trivia:**\n\n${question}\n\n⏰ Waktu habis! Kamu tidak menjawab tepat waktu.`,
+          content: `🧠 **${capitalize(
+            category
+          )} Trivia:**\nDifficulty: ${capitalize(
+            level
+          )}\n\n${question}\n\n⏰ Waktu habis! Kamu tidak menjawab tepat waktu.`,
           components: [disabledRow],
         });
       } catch (error) {
@@ -108,13 +161,4 @@ const Trivia: Command = {
   },
 };
 
-export default Trivia;
-
-// Fungsi untuk decode HTML entity (&quot;, &#039;, etc.)
-export function decodeHTML(html: string) {
-  return html
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'")
-    .replace(/&amp;/g, "&")
-    .replace(/&eacute;/g, "é");
-}
+export default Trivia2;
