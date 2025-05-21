@@ -44,9 +44,12 @@ async function loadEvents(client) {
     const eventFiles = fs_1.default
         .readdirSync(eventsPath)
         .filter((file) => file.endsWith(".ts") || file.endsWith(".js"));
+    const eventNames = [];
     for (const file of eventFiles) {
         const filePath = path_1.default.join(eventsPath, file);
         const event = (await Promise.resolve(`${filePath}`).then(s => __importStar(require(s)))).default;
+        // Simpan nama event untuk print nanti
+        eventNames.push(event.name);
         if (event.once) {
             client.once(event.name, (...args) => event.execute(...args, client));
         }
@@ -54,4 +57,7 @@ async function loadEvents(client) {
             client.on(event.name, (...args) => event.execute(...args, client));
         }
     }
+    // Print nama-nama event yang berhasil di-load
+    console.log("📥 Loaded Events:");
+    eventNames.forEach((name) => console.log(`- ${name}`));
 }
