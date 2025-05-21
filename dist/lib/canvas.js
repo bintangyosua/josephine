@@ -8,14 +8,6 @@ exports.generateRankingImageBuffer = generateRankingImageBuffer;
 const canvas_1 = require("canvas");
 const path_1 = __importDefault(require("path"));
 const fs_1 = __importDefault(require("fs"));
-// Register custom fonts
-(0, canvas_1.registerFont)(path_1.default.join(__dirname, "../fonts/Poppins-Regular.ttf"), {
-    family: "Poppins",
-});
-(0, canvas_1.registerFont)(path_1.default.join(__dirname, "../fonts/Poppins-Bold.ttf"), {
-    family: "Poppins",
-    weight: "bold",
-});
 function convertToRankingData(users) {
     return users.map((user, index) => ({
         discordId: user.discordId,
@@ -112,7 +104,7 @@ async function generateRankingImageBuffer(data) {
             rankColor = "#99AAB5"; // Regular color for others
         // Rank Text
         ctx.fillStyle = rankColor;
-        ctx.font = "bold 16px Poppins";
+        ctx.font = "bold 16px Arial";
         ctx.textAlign = "left";
         const rankText = `#${item.rank}`;
         const rankX = padding + 20;
@@ -120,7 +112,7 @@ async function generateRankingImageBuffer(data) {
         ctx.fillText(rankText, rankX, rankY);
         // Username
         ctx.fillStyle = "#FFFFFF";
-        ctx.font = "bold 14px Poppins";
+        ctx.font = "bold 14px Arial";
         const usernameX = rankX + ctx.measureText(rankText).width + 10;
         ctx.fillText(item.username, usernameX, rankY);
         // Messages + Icon
@@ -131,7 +123,7 @@ async function generateRankingImageBuffer(data) {
             // Draw message count
             ctx.fillStyle = "#FFFFFF";
             ctx.textAlign = "right";
-            ctx.font = "bold 14px Poppins";
+            ctx.font = "bold 14px Arial";
             const messageText = item.messages.toString();
             ctx.fillText(messageText, messagesX, messagesY);
             // Calculate icon position to the left of the message count
@@ -144,7 +136,7 @@ async function generateRankingImageBuffer(data) {
         // Optional: Add level or XP information
         ctx.fillStyle = "#99AAB5";
         ctx.textAlign = "left";
-        ctx.font = "bold 12px Poppins";
+        ctx.font = "bold 12px Arial";
         const levelText = `Lvl ${item.level}`;
         const levelX = usernameX + ctx.measureText(item.username).width + 15;
         ctx.fillText(levelText, levelX, rankY);

@@ -1,15 +1,6 @@
-import { createCanvas, loadImage, Canvas, Image, registerFont } from "canvas";
+import { createCanvas, loadImage, Canvas, Image } from "canvas";
 import path from "path";
 import fs from "fs";
-
-// Register custom fonts
-registerFont(path.join(__dirname, "../fonts/Poppins-Regular.ttf"), {
-  family: "Poppins",
-});
-registerFont(path.join(__dirname, "../fonts/Poppins-Bold.ttf"), {
-  family: "Poppins",
-  weight: "bold",
-});
 
 export interface UserData {
   id: string;
@@ -158,7 +149,7 @@ export async function generateRankingImageBuffer(
 
     // Rank Text
     ctx.fillStyle = rankColor;
-    ctx.font = "bold 16px Poppins";
+    ctx.font = "bold 16px Arial";
     ctx.textAlign = "left";
     const rankText = `#${item.rank}`;
     const rankX = padding + 20;
@@ -167,7 +158,7 @@ export async function generateRankingImageBuffer(
 
     // Username
     ctx.fillStyle = "#FFFFFF";
-    ctx.font = "bold 14px Poppins";
+    ctx.font = "bold 14px Arial";
     const usernameX = rankX + ctx.measureText(rankText).width + 10;
     ctx.fillText(item.username, usernameX, rankY);
 
@@ -180,7 +171,7 @@ export async function generateRankingImageBuffer(
       // Draw message count
       ctx.fillStyle = "#FFFFFF";
       ctx.textAlign = "right";
-      ctx.font = "bold 14px Poppins";
+      ctx.font = "bold 14px Arial";
       const messageText = item.messages.toString();
       ctx.fillText(messageText, messagesX, messagesY);
 
@@ -196,7 +187,7 @@ export async function generateRankingImageBuffer(
     // Optional: Add level or XP information
     ctx.fillStyle = "#99AAB5";
     ctx.textAlign = "left";
-    ctx.font = "bold 12px Poppins";
+    ctx.font = "bold 12px Arial";
     const levelText = `Lvl ${item.level}`;
     const levelX = usernameX + ctx.measureText(item.username).width + 15;
     ctx.fillText(levelText, levelX, rankY);
