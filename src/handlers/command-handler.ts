@@ -47,7 +47,7 @@ export async function loadCommands(client: ExtendedClient) {
     ]);
   });
 
-  console.log(chalk.bold("\n📦 Loaded Commands:"));
+  console.log(chalk.bgRedBright.black("\n📦 Loaded Commands:"));
   console.log(table.toString());
 
   const rest = new REST({ version: "10" }).setToken(config.DISCORD_BOT_TOKEN);
