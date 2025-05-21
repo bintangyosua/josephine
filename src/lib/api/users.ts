@@ -14,8 +14,20 @@ export const usersService = {
     return response;
   },
 
-  getUserByDiscordId: async (discordId: string) => {
+  async getUserByDiscordId(discordId: string) {
     const response = await api.get(`/users/${discordId}`);
+
+    if (response.data === null) {
+      return await this.createUser(discordId);
+    }
+
+    return response;
+  },
+
+  createUser: async (discordId: string) => {
+    const response = await api.post(`/users`, {
+      discordId,
+    });
     return response;
   },
 };

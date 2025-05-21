@@ -16,8 +16,17 @@ exports.usersService = {
         const response = await axios_1.default.get(`/users/${discordId}/message-create`);
         return response;
     },
-    getUserByDiscordId: async (discordId) => {
+    async getUserByDiscordId(discordId) {
         const response = await axios_1.default.get(`/users/${discordId}`);
+        if (response.data === null) {
+            return await this.createUser(discordId);
+        }
+        return response;
+    },
+    createUser: async (discordId) => {
+        const response = await axios_1.default.post(`/users`, {
+            discordId,
+        });
         return response;
     },
 };
