@@ -14,7 +14,10 @@ export default {
     if (!message.guild) return;
 
     const response = await addXp(message, 11, 20);
-    await usersService.messageCreate(message.author.id);
+    await usersService.messageCreate(
+      message.author.id,
+      message.author.username
+    );
 
     if (response.status !== 200) return;
 

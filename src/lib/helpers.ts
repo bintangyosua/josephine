@@ -12,6 +12,10 @@ export async function addXp(
   right: number
 ) {
   const xp = Math.floor(Math.random() * left) + right;
-  const response = await usersService.addXp(message.author.id, xp);
+  const response = await usersService.addXp(
+    message.author.id,
+    message.author.username,
+    xp
+  );
   return response;
 }
