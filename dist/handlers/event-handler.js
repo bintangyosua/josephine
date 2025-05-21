@@ -39,6 +39,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.loadEvents = loadEvents;
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
+const cli_table3_1 = __importDefault(require("cli-table3"));
+const chalk_1 = __importDefault(require("chalk"));
 async function loadEvents(client) {
     const eventsPath = path_1.default.join(__dirname, "..", "events");
     const eventFiles = fs_1.default
@@ -48,8 +50,8 @@ async function loadEvents(client) {
     for (const file of eventFiles) {
         const filePath = path_1.default.join(eventsPath, file);
         const event = (await Promise.resolve(`${filePath}`).then(s => __importStar(require(s)))).default;
-        // Simpan nama event untuk print nanti
-        eventNames.push(event.name);
+        // Simpan nama event dan tipe once/on
+        eventNames.push({ name: event.name, once: event.once });
         if (event.once) {
             client.once(event.name, (...args) => event.execute(...args, client));
         }
@@ -57,7 +59,23 @@ async function loadEvents(client) {
             client.on(event.name, (...args) => event.execute(...args, client));
         }
     }
-    // Print nama-nama event yang berhasil di-load
-    console.log("📥 Loaded Events:");
-    eventNames.forEach((name) => console.log(`- ${name}`));
+    // Buat tabel dengan cli-table3
+    const table = new cli_table3_1.default({
+        head: [
+            chalk_1.default.blue.bold("Event Name"),
+            chalk_1.default.green.bold("Type"),
+            chalk_1.default.yellow.bold("Status"),
+        ],
+        colWidths: [30, 15, 10],
+    });
+    // Isi baris tabel
+    eventNames.forEach(({ name, once }) => {
+        table.push([
+            chalk_1.default.cyan(name),
+            once ? chalk_1.default.magenta("Once") : chalk_1.default.white("On"),
+            chalk_1.default.green("Loaded"),
+        ]);
+    });
+    console.log(chalk_1.default.bgBlueBright.black("\n📥 Loaded Events"));
+    console.log(table.toString());
 }

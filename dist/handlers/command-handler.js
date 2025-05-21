@@ -76,7 +76,7 @@ async function loadCommands(client) {
             chalk_1.default.white(cmd.data.description || "-"),
         ]);
     });
-    console.log(chalk_1.default.bold("\n📦 Loaded Commands:"));
+    console.log(chalk_1.default.bgRedBright.black("\n📦 Loaded Commands:"));
     console.log(table.toString());
     const rest = new discord_js_1.REST({ version: "10" }).setToken(config_1.config.DISCORD_BOT_TOKEN);
     try {
