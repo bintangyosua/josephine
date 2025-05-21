@@ -6,7 +6,7 @@ const command = {
     category: "ℹ️  Info",
     data: new discord_js_1.SlashCommandBuilder()
         .setName("user-info")
-        .setDescription("🔍 User Info requested by user")
+        .setDescription("User info requested by user")
         .addUserOption((option) => option.setName("target").setDescription("Target user").setRequired(false)),
     async execute(interaction) {
         const user = interaction.options.getUser("target") || interaction.user;

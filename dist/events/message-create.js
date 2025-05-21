@@ -14,7 +14,7 @@ exports.default = {
         if (!message.guild)
             return;
         const response = await (0, helpers_1.addXp)(message, 11, 20);
-        await users_1.usersService.messageCreate(message.author.id);
+        await users_1.usersService.messageCreate(message.author.id, message.author.username);
         if (response.status !== 200)
             return;
         if (response.data.currentLevel === response.data.newLevel)

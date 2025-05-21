@@ -85,7 +85,7 @@ const BooksCommand = {
     category: "📔 Wiki",
     data: new discord_js_1.SlashCommandBuilder()
         .setName("books")
-        .setDescription("Tampilkan daftar buku berdasarkan pencarian.")
+        .setDescription("Show books by name")
         .addStringOption((option) => option
         .setName("book")
         .setDescription("Nama buku untuk mencari")

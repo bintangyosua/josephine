@@ -5,7 +5,7 @@ const command = {
     category: "ℹ️  Info",
     data: new discord_js_1.SlashCommandBuilder()
         .setName("server-info")
-        .setDescription("🔍 Menampilkan informasi tentang server"),
+        .setDescription("Show information about server"),
     async execute(interaction) {
         const guild = interaction.guild;
         if (!guild) {

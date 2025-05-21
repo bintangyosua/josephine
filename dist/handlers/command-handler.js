@@ -44,6 +44,7 @@ const config_1 = require("../config");
 const chalk_1 = __importDefault(require("chalk"));
 const cli_table3_1 = __importDefault(require("cli-table3"));
 const logger_1 = require("../utils/logger");
+const command_1 = require("../lib/api/command");
 async function loadCommands(client) {
     const commands = [];
     const commandFolders = fs_1.default.readdirSync(path_1.default.join(__dirname, "..", "commands"));
@@ -69,12 +70,17 @@ async function loadCommands(client) {
         colWidths: [20, 20, 50],
         wordWrap: true,
     });
-    commands.forEach((cmd) => {
+    commands.forEach(async (cmd) => {
         table.push([
             chalk_1.default.cyan(cmd.category),
             chalk_1.default.green(`/${cmd.data.name}`),
             chalk_1.default.white(cmd.data.description || "-"),
         ]);
+        await command_1.commandService.create({
+            name: cmd.data.name,
+            category: cmd.category,
+            description: cmd.data.description || "-",
+        });
     });
     console.log(chalk_1.default.bgRedBright.black("\n📦 Loaded Commands:"));
     console.log(table.toString());
