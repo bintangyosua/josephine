@@ -18,13 +18,6 @@ export default {
     try {
       await command.execute(interaction);
 
-      if (interaction.guild?.id) {
-        if (command.data.name !== "profile") {
-          const xp = Math.floor(Math.random() * 11) + 20;
-          await usersService.addXp(interaction.user.id, xp);
-        }
-      }
-
       logger.info(`✅ Success executing command "/${interaction.commandName}"`);
     } catch (err) {
       console.error(

@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const discord_js_1 = require("discord.js");
 const users_1 = require("../lib/api/users");
+const helpers_1 = require("../lib/helpers");
 exports.default = {
     name: discord_js_1.Events.MessageCreate,
     once: false,
@@ -12,8 +13,7 @@ exports.default = {
         // Validasi 2: Pastikan pesan dari guild (server), bukan DM
         if (!message.guild)
             return;
-        const xp = Math.floor(Math.random() * 11) + 20;
-        const response = await users_1.usersService.addXp(message.author.id, xp);
+        const response = await (0, helpers_1.addXp)(message, 11, 20);
         await users_1.usersService.messageCreate(message.author.id);
         if (response.status !== 200)
             return;

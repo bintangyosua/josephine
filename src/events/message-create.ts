@@ -1,6 +1,7 @@
 import { Events, Message } from "discord.js";
 import api from "../lib/axios";
 import { usersService } from "../lib/api/users";
+import { addXp } from "../lib/helpers";
 
 export default {
   name: Events.MessageCreate,
@@ -12,8 +13,7 @@ export default {
     // Validasi 2: Pastikan pesan dari guild (server), bukan DM
     if (!message.guild) return;
 
-    const xp = Math.floor(Math.random() * 11) + 20;
-    const response = await usersService.addXp(message.author.id, xp);
+    const response = await addXp(message, 11, 20);
     await usersService.messageCreate(message.author.id);
 
     if (response.status !== 200) return;
