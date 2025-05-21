@@ -10,7 +10,7 @@ const command: Command = {
   category: "ℹ️  Info",
   data: new SlashCommandBuilder()
     .setName("server-info")
-    .setDescription("🔍 Menampilkan informasi tentang server"),
+    .setDescription("Show information about server"),
   async execute(interaction: ChatInputCommandInteraction) {
     const guild = interaction.guild;
 

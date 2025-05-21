@@ -11,7 +11,7 @@ const command: Command = {
   category: "ℹ️  Info",
   data: new SlashCommandBuilder()
     .setName("user-info")
-    .setDescription("🔍 User Info requested by user")
+    .setDescription("User info requested by user")
     .addUserOption((option) =>
       option.setName("target").setDescription("Target user").setRequired(false)
     ),

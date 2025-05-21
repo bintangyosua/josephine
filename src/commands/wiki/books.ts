@@ -122,7 +122,7 @@ const BooksCommand: Command = {
   category: "📔 Wiki",
   data: new SlashCommandBuilder()
     .setName("books")
-    .setDescription("Tampilkan daftar buku berdasarkan pencarian.")
+    .setDescription("Show books by name")
     .addStringOption((option) =>
       option
         .setName("book")

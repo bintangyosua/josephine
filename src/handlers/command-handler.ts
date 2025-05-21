@@ -7,6 +7,7 @@ import { config } from "../config";
 import chalk from "chalk";
 import CliTable3 from "cli-table3";
 import { logger } from "../utils/logger";
+import { commandService } from "../lib/api/command";
 
 export async function loadCommands(client: ExtendedClient) {
   const commands: Command[] = [];
@@ -39,12 +40,18 @@ export async function loadCommands(client: ExtendedClient) {
     wordWrap: true,
   });
 
-  commands.forEach((cmd) => {
+  commands.forEach(async (cmd) => {
     table.push([
       chalk.cyan(cmd.category),
       chalk.green(`/${cmd.data.name}`),
       chalk.white(cmd.data.description || "-"),
     ]);
+
+    await commandService.create({
+      name: cmd.data.name,
+      category: cmd.category,
+      description: cmd.data.description || "-",
+    });
   });
 
   console.log(chalk.bgRedBright.black("\n📦 Loaded Commands:"));
