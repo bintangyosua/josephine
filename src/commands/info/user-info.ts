@@ -35,37 +35,56 @@ const command: Command = {
           .join(", ") || "Tidak ada"
       : "Tidak ada";
 
+    // Additional information
+    const nickname = member?.nickname || "None";
+    const isBot = user.bot ? "Yes" : "No";
+    const highestRole = member?.roles.highest?.name || "None";
+
+    let status = "⚫ Offline";
+    if (member?.presence) {
+      switch (member.presence.status) {
+        case "online":
+          status = "🟢 Online";
+          break;
+        case "idle":
+          status = "🌙 Idle";
+          break;
+        case "dnd":
+          status = "⛔ Do Not Disturb";
+          break;
+        // 'offline' is handled by the default
+      }
+    }
+
     const embed = new EmbedBuilder()
       .setColor(colors.red)
       .setAuthor({ iconURL: user.displayAvatarURL(), name: user.tag })
       .setDescription(user.toString())
       .setThumbnail(user.displayAvatarURL({ size: 256 }))
       .addFields(
-        {
-          name: "ID",
-          value: user.id,
-          inline: true,
-        },
+        { name: "ID", value: user.id, inline: true },
+        { name: "Nickname", value: nickname, inline: true },
+        { name: "Bot?", value: isBot, inline: true },
+        { name: "Status", value: status, inline: true },
+        { name: "Highest Role", value: highestRole, inline: true },
+        { name: "Badges", value: badges, inline: true }, // Changed to inline true for better spacing
         {
           name: "Created Date",
           value: `<t:${Math.floor(user.createdTimestamp / 1000)}:F>`,
+          inline: false,
         },
         ...(member
           ? [
               {
                 name: "Joined Date",
                 value: `<t:${Math.floor(member.joinedTimestamp! / 1000)}:F>`,
+                inline: false,
               },
             ]
           : []),
         {
-          name: "Badges",
-          value: badges,
-          inline: false,
-        },
-        {
           name: "Roles",
-          value: roles,
+          value: roles, // This can be long, keeping it non-inline
           inline: false,
         }
       )
