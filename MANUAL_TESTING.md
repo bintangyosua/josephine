@@ -1,6 +1,6 @@
-# Manual Testing Instructions for Fun and Info Commands
+# Manual Testing Instructions for Fun, Info, and Game Commands
 
-This document provides instructions on how to manually test various commands, including `dadjoke`, `eightball`, `randomfact`, `server-info`, `user-info`, `github`, and `serverroles`.
+This document provides instructions on how to manually test various commands, including `dadjoke`, `eightball`, `randomfact`, `server-info`, `user-info`, `github`, `serverroles`, and the Honkai Star Rail commands (`hsr-profile`, `hsr-character`, `hsr-gameinfo`).
 
 ## Prerequisites for Testing
 
@@ -10,6 +10,7 @@ Before you begin testing, ensure the following:
 2.  **Bot is Running:** The bot application must be running and successfully connected to your Discord server.
 3.  **Command Registration:** Slash commands need to be registered with Discord. This is often handled by a specific script (e.g., `npm run deploy-commands` or similar) or automatically when the bot starts up. Ensure this step has been completed so that Discord is aware of the new commands.
 4.  **Bot Permissions:** The bot must have the necessary permissions in the channel where you are testing (e.g., "Send Messages", "Use Application Commands").
+5.  **StarRail.js Cache:** For Honkai Star Rail commands, the `starrail.js` library might need to download/update its cache on first run or after a while. This can take a few moments. Ensure the bot has been running for a bit to allow this process to complete, or check console logs for messages about cache updates.
 
 ## Testing Fun Commands
 
@@ -112,7 +113,7 @@ Before you begin testing, ensure the following:
     3.  **No Custom Roles:**
         *   **Input:** Test in a server with no custom roles (only @everyone).
         *   **Expected Output:** An ephemeral message like "This server has no roles to display (besides @everyone)." and no select menu.
-    4.  **Role List Truncation (Description):** If the text list of roles in the main embed's description is very long (e.g., many roles with long names), verify it's truncated with a message like "...and X more roles." (This was part of the initial implementation, good to re-verify).
+    4.  **Role List Truncation (Description):** If the text list of roles in the main embed's description is very long (e.g., many roles with long names), verify it's truncated with a message like "...and X more roles."
 
 *   **Interactive Detail View Trigger:**
     *   From the select menu displayed by `/serverroles`, choose a role.
@@ -136,7 +137,118 @@ Before you begin testing, ensure the following:
         *   **Test:** Trigger the `/serverroles` command. Do not interact with the select menu for the duration of the collector timeout (e.g., 2 minutes).
         *   **Expected Output:** After the timeout, the select menu on the original message should become disabled (grayed out and unclickable). Trying to interact with it should do nothing.
 
+## Testing Honkai Star Rail Commands
+
+### Testing `hsr-profile` Command
+
+*   **Trigger:** `/hsr-profile uid:<valid_hsr_uid>`
+*   **Options:**
+    *   `uid` (required): A valid Honkai Star Rail User ID (e.g., a known working UID from the game).
+*   **Test Cases:**
+    1.  **Valid UID:**
+        *   **Input:** Provide a valid HSR UID.
+        *   **Expected Output:** An embed displaying the player's profile information:
+            *   UID
+            *   Nickname
+            *   Trailblaze Level
+            *   Equilibrium Level (World Level)
+            *   Friends (Friend Count)
+            *   Achievement Count
+            *   Signature (if set by the player)
+            *   Characters in Showcase (list of character names)
+            *   Player Avatar as thumbnail.
+            *   A link to Enka.Network if `enkaUserHash` is available.
+        *   **Verification:** Compare the displayed information with the player's actual in-game profile or their profile on a site like Enka.Network (if linked).
+    2.  **Invalid/Non-existent UID:**
+        *   **Input:** Provide an invalid UID (e.g., "123", "abcdef") or a UID that does not exist.
+        *   **Expected Output:** An error message indicating the profile could not be fetched, user not found, or UID is invalid.
+
+### Testing `hsr-character` Command
+
+*   **Trigger:** `/hsr-character name:<character_name>`
+*   **Options:**
+    *   `name` (required): The name of a Honkai Star Rail character.
+*   **Autocomplete Testing:**
+    1.  Start typing a character name (e.g., "Mar", "See", "Jing").
+    2.  **Expected Behavior:** A list of matching character names should appear as autocomplete suggestions.
+    3.  Select a character from the suggestions and execute the command.
+*   **Direct Input Testing:**
+    1.  Type a full, valid character name (e.g., "March 7th", "Seele", "Jing Yuan") and execute.
+*   **Expected Output (for valid character):**
+    *   An embed displaying character details:
+        *   Name (e.g., "March 7th")
+        *   Color (matching the character's element/Combat Type)
+        *   Thumbnail (character's icon)
+        *   Image (character's splash art)
+        *   Rarity (e.g., ⭐⭐⭐⭐ or ⭐⭐⭐⭐⭐)
+        *   Path (e.g., "The Preservation")
+        *   Element/Combat Type (e.g., "Ice")
+        *   Description (a brief overview of the character)
+        *   Skills: A list of skills, each showing:
+            *   Skill Name
+            *   Skill Type (e.g., "Basic ATK", "Skill", "Ultimate", "Talent", "Technique")
+            *   Skill Description (cleaned of HTML and truncated if too long)
+    *   **Verification:** Compare the displayed details with in-game information or reliable HSR databases/wikis for accuracy.
+*   **Non-existent Character Name:**
+    *   **Input:** Type a name that is not a valid HSR character (e.g., "Pikachu").
+    *   **Expected Output:** An error message indicating the character was not found.
+
+### Testing `hsr-gameinfo` Command
+
+*   **`events` Subcommand:**
+    *   **Trigger:** `/hsr-gameinfo events`
+    *   **Expected Output:**
+        *   **If data is available via the library:** An embed listing current in-game events. Each event entry should ideally show:
+            *   Event Name
+            *   Duration (Start Date - End Date)
+            *   A brief Description
+            *   A URL to more details (if provided by the API)
+        *   **Verification (if data shown):** Check the general accuracy of event names and durations against official Honkai Star Rail announcements or in-game information.
+        *   **Important Note for Tester:** If the bot replies with a message like "Fetching event information is currently not supported..." or similar, this is an **acceptable outcome**. It indicates that the `starrail.js` library (or the version used) does not provide a direct method to fetch this specific live game data.
+*   **`banners` Subcommand:**
+    *   **Trigger:** `/hsr-gameinfo banners`
+    *   **Expected Output:**
+        *   **If data is available via the library:** An embed listing current character and light cone banners. Each banner entry should ideally show:
+            *   Banner Name/Title
+            *   Featured 5-star character/light cone
+            *   Featured 4-star characters/light cones
+            *   Banner End Time
+            *   An image of the banner (if provided by the API)
+        *   **Verification (if data shown):** Check the general accuracy of featured items and end times against official Honkai Star Rail announcements or in-game information.
+        *   **Important Note for Tester:** Similar to the `events` subcommand, if the bot replies with a message like "Fetching banner information is currently not supported..." or similar, this is an **acceptable outcome** due to potential library limitations.
+
 ## General Notes
 
 *   If a command does not appear in the slash command suggestions in Discord, it's likely an issue with command registration or bot permissions.
 *   If a command appears but fails to execute or returns an error, check the bot's console logs for error messages. This can help diagnose if the issue is with the API, the bot's code, or its configuration.
+*   For commands fetching from external APIs (GitHub, HSR APIs), ensure the testing environment has internet connectivity. API responses can also vary or be temporarily unavailable.I have reviewed the `MANUAL_TESTING.md` file that I updated in the previous turn. It seems I have already included all the requested information for testing the new Honkai Star Rail commands: `hsr-profile`, `hsr-character`, and `hsr-gameinfo`, as per the current subtask description.
+
+Specifically:
+
+For `hsr-profile`:
+*   **Trigger and Options:** `/hsr-profile uid:<valid_hsr_uid>` is specified.
+*   **Expected Output (Valid UID):** Details like UID, Nickname, Trailblaze Level, Equilibrium Level, Friends, Achievement Count, Signature, Characters in Showcase, avatar, and Enka.Network link are listed for verification.
+*   **Invalid UID:** Instruction to test with an invalid UID and expect an error message.
+
+For `hsr-character`:
+*   **Trigger and Options:** `/hsr-character name:<character_name>` is specified.
+*   **Autocomplete Testing:** Steps to test autocomplete by typing parts of a name and selecting from suggestions are included.
+*   **Direct Input Testing:** Instruction to test by typing a full valid name.
+*   **Expected Output (Valid Character):** Details like Name, Color, Thumbnail, Image, Rarity, Path, Element, Description, and Skills (name, type, description) are listed for verification.
+*   **Non-existent Character:** Instruction to test with a non-existent name and expect an error.
+
+For `hsr-gameinfo`:
+*   **`events` Subcommand:**
+    *   **Trigger:** `/hsr-gameinfo events` is specified.
+    *   **Expected Output:** Describes the ideal embed contents (name, duration, description, URL).
+    *   **Important Note for Tester:** Explicitly states that an "unsupported feature" message is an acceptable outcome due to library limitations.
+    *   Includes verification against official sources if data is displayed.
+*   **`banners` Subcommand:**
+    *   **Trigger:** `/hsr-gameinfo banners` is specified.
+    *   **Expected Output:** Describes the ideal embed contents (name, featured items, end times, image).
+    *   **Important Note for Tester:** Explicitly states that an "unsupported feature" message is an acceptable outcome.
+    *   Includes verification against official sources if data is displayed.
+
+The "Prerequisites for Testing" section was also updated to include a note about `starrail.js` cache initialization. "General Notes" are present. The title of the document was updated to "Manual Testing Instructions for Fun, Info, and Game Commands".
+
+Therefore, the `MANUAL_TESTING.md` file should already be complete according to the current subtask's requirements. No further modifications seem necessary.
