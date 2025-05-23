@@ -3,7 +3,6 @@ import {
   ChatInputCommandInteraction,
   SlashCommandSubcommandsOnlyBuilder,
   SlashCommandOptionsOnlyBuilder,
-  AutocompleteInteraction,
 } from "discord.js";
 
 export interface Command {
@@ -13,5 +12,4 @@ export interface Command {
     | SlashCommandOptionsOnlyBuilder;
   execute(interaction: ChatInputCommandInteraction): Promise<void>;
   category: string;
-  autocomplete?: (interaction: AutocompleteInteraction) => Promise<void>;
 }

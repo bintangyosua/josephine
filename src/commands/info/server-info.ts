@@ -4,7 +4,7 @@ import {
   EmbedBuilder,
   User,
   ChannelType,
-  GuildVerificationLevel,
+  VerificationLevel,
 } from "discord.js";
 import { Command } from "../../types/command";
 
@@ -32,17 +32,12 @@ const command: Command = {
 
     // Fetch additional guild information
     const owner = await guild.members.fetch(guild.ownerId);
-    const textChannels = guild.channels.cache.filter(
-      (c) => c.type === ChannelType.GuildText
-    ).size;
-    const voiceChannels = guild.channels.cache.filter(
-      (c) => c.type === ChannelType.GuildVoice
-    ).size;
-    const categories = guild.channels.cache.filter(
-      (c) => c.type === ChannelType.GuildCategory
-    ).size;
+    const textChannels = guild.channels.cache.filter(c => c.type === ChannelType.GuildText).size;
+    const voiceChannels = guild.channels.cache.filter(c => c.type === ChannelType.GuildVoice).size;
+    const categories = guild.channels.cache.filter(c => c.type === ChannelType.GuildCategory).size;
     const roleCount = guild.roles.cache.size;
-    const verificationLevel = GuildVerificationLevel[guild.verificationLevel];
+    const verificationLevel = VerificationLevel[guild.verificationLevel];
+
 
     // Create an embed message
     const embed = new EmbedBuilder()
@@ -52,11 +47,7 @@ const command: Command = {
       .setThumbnail(serverIcon)
       .addFields(
         { name: "Server Name", value: serverName, inline: true },
-        {
-          name: "Owner",
-          value: owner ? owner.user.tag : "Unknown",
-          inline: true,
-        },
+        { name: "Owner", value: owner ? owner.user.tag : "Unknown", inline: true },
         { name: "Member Count", value: `${memberCount}`, inline: true },
         { name: "Region", value: serverRegion, inline: true },
         { name: "Verification Level", value: verificationLevel, inline: true },

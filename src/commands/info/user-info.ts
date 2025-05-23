@@ -24,7 +24,7 @@ const command: Command = {
     // Format badge jadi string
     const badges =
       flags.length > 0
-        ? flags.map((flag) => `\`${flag}\``).join(" ")
+        ? flags.map((flag) => `\`${flag}\``).join(", ")
         : "Tidak ada";
 
     // Ambil roles (kecuali @everyone)
@@ -32,7 +32,7 @@ const command: Command = {
       ? member.roles.cache
           .filter((role) => role.id !== interaction.guild?.id)
           .map((role) => role.toString())
-          .join(" ") || "Tidak ada"
+          .join(", ") || "Tidak ada"
       : "Tidak ada";
 
     // Additional information

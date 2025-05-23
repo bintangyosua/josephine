@@ -40,7 +40,7 @@ const HsrProfileCommand: Command = {
       const embed = new EmbedBuilder()
         .setColor(colors.primary || "#0099ff") // Use a primary color from your config or a default
         .setTitle(`Honkai Star Rail Profile: ${user.nickname}`)
-        // .setThumbnail(user.icon.url) // Assuming user.icon has a url property for the avatar
+        .setThumbnail(user.icon.url) // Assuming user.icon has a url property for the avatar
         .addFields(
           { name: "UID", value: user.uid.toString(), inline: true },
           { name: "Nickname", value: user.nickname, inline: true },
@@ -75,14 +75,14 @@ const HsrProfileCommand: Command = {
       }
 
       if (user.starfaringCompanions && user.starfaringCompanions.length > 0) {
-        // const showcaseCharacters = user.starfaringCompanions
-        //   .map((character) => character.characterData.name || character.id) // Fallback to ID if name is not available
-        //   .join(", ");
-        // embed.addFields({
-        //   name: "Characters in Showcase",
-        //   value: showcaseCharacters,
-        //   inline: false,
-        // });
+        const showcaseCharacters = user.starfaringCompanions
+          .map((character) => character.name.get("en") || character.id) // Fallback to ID if name is not available
+          .join(", ");
+        embed.addFields({
+          name: "Characters in Showcase",
+          value: showcaseCharacters,
+          inline: false,
+        });
       } else {
         embed.addFields({
           name: "Characters in Showcase",
@@ -90,18 +90,16 @@ const HsrProfileCommand: Command = {
           inline: false,
         });
       }
-
+      
       // Add a link to Enka.Network profile if possible
       // The library's EnkaUser might have a URL or user.enkaUserHash could be used
       if (user.enkaUserHash) {
-        embed.setURL(`https://enka.network/hsr/${user.uid}/`);
-        embed.setFooter({
-          text: `View on Enka.Network | UID: ${user.uid}`,
-          // iconURL: user.icon.url,
-        });
+          embed.setURL(`https://enka.network/hsr/${user.uid}/`);
+          embed.setFooter({ text: `View on Enka.Network | UID: ${user.uid}`, iconURL: user.icon.url });
       } else {
-        // embed.setFooter({ text: `UID: ${user.uid}`, iconURL: user.icon.url });
+          embed.setFooter({ text: `UID: ${user.uid}`, iconURL: user.icon.url });
       }
+
 
       embed.setTimestamp();
 
@@ -110,16 +108,15 @@ const HsrProfileCommand: Command = {
       console.error(`Error fetching HSR profile for UID ${uid}:`, error);
       let errorMessage = `Could not fetch profile for UID: ${uid}. `;
       if (error.message && error.message.includes("User Not Found")) {
-        errorMessage += "The user was not found. Please check the UID.";
+          errorMessage += "The user was not found. Please check the UID.";
       } else if (error.message && error.message.includes("Invalid UID")) {
-        errorMessage += "The UID format is invalid.";
+          errorMessage += "The UID format is invalid.";
       } else if (error.message) {
-        errorMessage += `Details: ${error.message}`;
+          errorMessage += `Details: ${error.message}`;
       } else {
-        errorMessage +=
-          "An unknown error occurred. The profile might be private or the API is temporarily unavailable.";
+          errorMessage += "An unknown error occurred. The profile might be private or the API is temporarily unavailable.";
       }
-
+      
       await interaction.editReply({
         content: errorMessage,
       });

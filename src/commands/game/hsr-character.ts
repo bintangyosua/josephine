@@ -104,49 +104,41 @@ const HsrCharacterCommand: Command = {
     if (description) {
       embed.addFields({
         name: "Description",
-        value:
-          cleanDescription(description).substring(0, 1020) +
-          (description.length > 1020 ? "..." : ""),
+        value: cleanDescription(description).substring(0, 1020) + (description.length > 1020 ? "..." : ""),
       });
     }
-
+    
     // Skills
     if (character.skills && character.skills.length > 0) {
-      character.skills.forEach((skill: Skill, index: number) => {
-        // Only show first 3-4 skills to prevent embed overflow, or make it more selective
-        if (index < 4) {
-          const skillName = skill.name.get("en") || `Skill ${index + 1}`;
-          const skillType = skill.skillType;
-          let skillDesc = cleanDescription(
-            skill._skillsData.map((s) => s.desc).join("\n")
-          );
-          if (skillDesc.length > 200) {
-            // Keep skill descriptions concise
-            skillDesc = skillDesc.substring(0, 197) + "...";
-          }
-          embed.addFields({
-            name: `${skillName} (${skillType})`,
-            value: skillDesc,
-            inline: false,
-          });
-        }
-      });
-      if (character.skills.length > 4) {
-        embed.addFields({
-          name: "More Skills",
-          value: "This character has more skills, not all are listed here.",
-          inline: false,
+        character.skills.forEach((skill: Skill, index: number) => {
+            // Only show first 3-4 skills to prevent embed overflow, or make it more selective
+            if (index < 4) { 
+                const skillName = skill.name.get("en") || `Skill ${index + 1}`;
+                const skillType = skill.typeDescription.get("en") || "N/A";
+                let skillDesc = cleanDescription(skill.description.get("en") || "No description available.");
+                if (skillDesc.length > 200) { // Keep skill descriptions concise
+                    skillDesc = skillDesc.substring(0, 197) + "...";
+                }
+                embed.addFields({
+                    name: `${skillName} (${skillType})`,
+                    value: skillDesc,
+                    inline: false, 
+                });
+            }
         });
-      }
+        if (character.skills.length > 4) {
+             embed.addFields({ name: "More Skills", value: "This character has more skills, not all are listed here.", inline: false });
+        }
     }
+
 
     embed.setFooter({
       text: `ID: ${character.id} | Path Icon: ${character.path.icon.url} | Element Icon: ${character.combatType.icon.url}`,
-      iconURL: character.miniIcon.url, // Using miniIcon for footer if available
+      iconURL: character.miniIcon.url // Using miniIcon for footer if available
     });
     embed.setTimestamp();
 
-    await interaction.editReply({ content: "" });
+    await interaction.editReply({ embeds: [embed] });
   },
 };
 

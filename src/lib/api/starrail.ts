@@ -18,18 +18,24 @@ starRailClient.cachedAssetsManager.activateAutoCacheUpdater({
   instant: true, // Run the first update check immediately
   timeout: 60 * 60 * 1000, // Every 1 hour
   onUpdateStart: async () => {
-    console.log("[StarRail] Starting Star Rail Data update...");
+    try {
+      console.log("StarRail Auto Cache Updater: Update started.");
+    } catch (e) {
+      console.error("StarRail Auto Cache Updater: Error in onUpdateStart callback:", e);
+    }
   },
   onUpdateEnd: async () => {
     try {
       await starRailClient.cachedAssetsManager.refreshAllData(); // Refresh memory with new data
-      console.log("[StarRail] Star Rail Data update completed and refreshed!");
-    } catch (error) {
-      console.error("[StarRail] Error refreshing data after update:", error);
+      console.log("StarRail Auto Cache Updater: Update finished. Memory refreshed.");
+    } catch (e) {
+      console.error("StarRail Auto Cache Updater: Error in onUpdateEnd callback:", e);
+      // Optionally, re-throw or handle if refreshAllData() failing is critical
+      // For now, just logging it here is fine.
     }
   },
-  onError: async (error: Error) => {
-    console.error("[StarRail] Error during auto cache update:", error);
+  onError: async (error: Error) => { // Matched type to Error as per original if it was specific, or unknown if more general
+    console.error("StarRail Auto Cache Updater: An error occurred during update:", error);
   }
 });
 
