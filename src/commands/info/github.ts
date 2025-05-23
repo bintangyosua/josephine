@@ -24,6 +24,8 @@ const GitHubCommand: Command = {
     try {
       const userData = await githubServices.getUser(username);
 
+      console.log({ userData });
+
       if (!userData) {
         await interaction.reply({
           content:

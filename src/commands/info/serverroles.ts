@@ -100,17 +100,16 @@ const ServerRolesCommand: Command = {
         iconURL: interaction.user.displayAvatarURL(),
       });
 
-    const actionRow = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(
-      selectMenu
-    );
+    const actionRow =
+      new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(selectMenu);
 
     const reply = await interaction.reply({
       embeds: [mainEmbed],
-      components: rolesForMenu.size > 0 ? [actionRow] : [], // Only add menu if there are roles
+      components: rolesForMenu.length > 0 ? [actionRow] : [], // Only add menu if there are roles
     });
 
     // --- Interaction Collector ---
-    if (rolesForMenu.size === 0) return; // No need for collector if menu is empty
+    if (rolesForMenu.length === 0) return; // No need for collector if menu is empty
 
     const collector = reply.createMessageComponentCollector({
       componentType: ComponentType.StringSelect,
@@ -139,11 +138,11 @@ const ServerRolesCommand: Command = {
       }
 
       let permissionsString = role.permissions.toArray().join(", ");
-      if (permissionsString.length > 1020) { // Max field value 1024
+      if (permissionsString.length > 1020) {
+        // Max field value 1024
         permissionsString = permissionsString.substring(0, 1020) + "...";
       }
       if (!permissionsString) permissionsString = "None";
-
 
       const detailEmbed = new EmbedBuilder()
         .setColor(role.color || colors.primary || "#0099ff")
@@ -157,10 +156,18 @@ const ServerRolesCommand: Command = {
             value: role.mentionable ? "Yes" : "No",
             inline: true,
           },
-          { name: "Hoisted", value: role.hoisted ? "Yes" : "No", inline: true },
+          { name: "Hoisted", value: role.hoist ? "Yes" : "No", inline: true },
           { name: "Position", value: role.position.toString(), inline: true },
-          { name: "Members", value: role.members.size.toString(), inline: true },
-          { name: "Created At", value: `<t:${Math.floor(role.createdTimestamp / 1000)}:R>`, inline: true },
+          {
+            name: "Members",
+            value: role.members.size.toString(),
+            inline: true,
+          },
+          {
+            name: "Created At",
+            value: `<t:${Math.floor(role.createdTimestamp / 1000)}:R>`,
+            inline: true,
+          },
           { name: "Permissions", value: permissionsString, inline: false }
         )
         .setTimestamp()
@@ -177,13 +184,17 @@ const ServerRolesCommand: Command = {
       try {
         const message = await interaction.fetchReply();
         if (message.components.length > 0) {
-          const disabledActionRow = new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(
-            selectMenu.setDisabled(true)
-          );
+          const disabledActionRow =
+            new ActionRowBuilder<StringSelectMenuBuilder>().addComponents(
+              selectMenu.setDisabled(true)
+            );
           await interaction.editReply({ components: [disabledActionRow] });
         }
       } catch (error) {
-        console.error("Failed to disable select menu on serverroles command:", error);
+        console.error(
+          "Failed to disable select menu on serverroles command:",
+          error
+        );
       }
     });
   },
