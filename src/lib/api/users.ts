@@ -10,6 +10,14 @@ export const usersService = {
     return response;
   },
 
+  addBalance: async (discordId: string, amount: number) => {
+    const response = await api.post(`/users/${discordId}/add-balance`, {
+      amount: amount,
+    });
+
+    return response;
+  },
+
   messageCreate: async (discordId: string, username: string) => {
     try {
       const response = await api.post(`/users/${discordId}/message-create`, {

@@ -24,7 +24,6 @@ const ProfileCommand: Command = {
       });
 
     if (interaction.guild?.id) {
-      console.log("masuk sini");
       embed.setAuthor({
         name: interaction.guild.name,
         iconURL: interaction.guild.iconURL() ?? "",
@@ -62,6 +61,11 @@ const ProfileCommand: Command = {
       {
         name: "Total Xp",
         value: `${user.data.totalXp}`,
+        inline: true,
+      },
+      {
+        name: "Balance",
+        value: `${user.data.balance}`,
         inline: true,
       }
     );

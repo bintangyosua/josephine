@@ -9,6 +9,7 @@ import { Command } from "../../types/command";
 import { funServices } from "../../lib/api/fun";
 import { capitalize } from "../../lib/helpers";
 import he from "he";
+import { usersService } from "../../lib/api/users";
 
 const Trivia: Command = {
   category: "🎉 Fun",
@@ -74,13 +75,22 @@ const Trivia: Command = {
         })
         .join("\n");
 
-      const resultText =
+      let resultText =
         selectedLabel === correct
           ? "🎉 Jawaban kamu **benar**!"
           : `😔 Jawaban kamu **salah**.`;
+      
+      if (selectedLabel === correct) {
+        const bonusAmount = Math.floor(Math.random() * 100) + 1;
+        try {
+          await usersService.addBalance(interaction.user.id, bonusAmount);
+        } catch (error) {
+          console.error("Error adding balance:", error);
+        }
+      }
 
       await i.update({
-        content: `🧠 **Trivia:** ${question}\n\n${optionText}\n\n${resultText}`,
+        content: `🧠 **Trivia:** ${question}\n\n${optionText}`,
         components: [],
       });
     });

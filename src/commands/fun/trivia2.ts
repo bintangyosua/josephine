@@ -8,6 +8,7 @@ import {
 import { Command } from "../../types/command";
 import { funServices } from "../../lib/api/fun";
 import { opentdbService } from "../../lib/api/opentdb";
+import { usersService } from "../../lib/api/users";
 import { decodeHTML } from "./trivia";
 import { capitalize } from "../../lib/helpers";
 import he from "he";
@@ -136,6 +137,15 @@ const Trivia2: Command = {
         selected === correct
           ? "🎉 Jawaban kamu **benar**!"
           : `😔 Jawaban kamu **salah**. Jawaban yang benar adalah **${correct}**.`;
+
+      if (selected === correct) {
+        const bonusAmount = Math.floor(Math.random() * 100) + 1;
+        try {
+          await usersService.addBalance(interaction.user.id, bonusAmount);
+        } catch (error) {
+          console.error("Error adding balance:", error);
+        }
+      }
 
       await i.update({
         content: `🧠 **${capitalize(

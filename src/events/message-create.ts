@@ -1,5 +1,4 @@
 import { Events, Message } from "discord.js";
-import api from "../lib/axios";
 import { usersService } from "../lib/api/users";
 import { addXp } from "../lib/helpers";
 
@@ -29,6 +28,7 @@ export default {
         await channel.send(
           `Selamat <@${message.author.id}>, kamu berhasil naik ke level ${response.data.newLevel}.`
         );
+        await usersService.addBalance(message.author.id, 100);
       } catch (error) {
         console.error("Failed to send leveled up message.:", error);
       }
