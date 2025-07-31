@@ -1,5 +1,5 @@
 # Gunakan image node versi LTS
-FROM node:22-alpine
+FROM node:22
 
 # Buat direktori kerja di container
 WORKDIR /app
