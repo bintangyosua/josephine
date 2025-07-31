@@ -17,6 +17,9 @@ const LeaderboardCommand: Command = {
     .setDescription("Show Global Leaderboard"),
 
   async execute(interaction) {
+    // Defer the reply immediately to prevent timeout
+    await interaction.deferReply();
+    
     const response = await usersService.leaderboard();
 
     const rankingData = convertToRankingData(response.data);
@@ -36,7 +39,7 @@ const LeaderboardCommand: Command = {
       .setTimestamp()
       .setColor(0x5865f2);
 
-    interaction.reply({
+    await interaction.editReply({
       embeds: [embed],
       files: [attachment],
     });

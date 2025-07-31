@@ -9,6 +9,9 @@ const ProfileCommand: Command = {
     .setName("profile")
     .setDescription("Show your profile"),
   async execute(interaction) {
+    // Defer the reply immediately to prevent timeout
+    await interaction.deferReply();
+    
     const user = await usersService.getUserByDiscordId(interaction.user.id);
 
     const embed = new EmbedBuilder()
@@ -66,7 +69,7 @@ const ProfileCommand: Command = {
     // Set fields sekaligus
     embed.setFields(fields);
 
-    await interaction.reply({ embeds: [embed] });
+    await interaction.editReply({ embeds: [embed] });
   },
 };
 

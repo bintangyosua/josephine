@@ -8,9 +8,12 @@ const Meme: Command = {
     .setName("waifu")
     .setDescription("Replies with a random waifu"),
   async execute(interaction) {
+    // Defer the reply immediately to prevent timeout
+    await interaction.deferReply();
+    
     const waifu = await funServices.getWaifu();
     const embed = new EmbedBuilder().setImage(waifu.url);
-    interaction.reply({ embeds: [embed] });
+    await interaction.editReply({ embeds: [embed] });
   },
 };
 

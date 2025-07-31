@@ -8,9 +8,12 @@ const AdviceCommand: Command = {
     .setName("advice")
     .setDescription("Replies with a random advice"),
   async execute(interaction) {
+    // Defer the reply immediately to prevent timeout
+    await interaction.deferReply();
+    
     const advice = await funServices.getAdvice();
 
-    interaction.reply(advice.slip.advice);
+    await interaction.editReply(advice.slip.advice);
   },
 };
 

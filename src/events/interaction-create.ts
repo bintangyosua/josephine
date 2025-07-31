@@ -24,10 +24,18 @@ export default {
         `❌ Error executing command ${interaction.commandName}:`,
         err
       );
-      await interaction.reply({
+      
+      const errorMessage = {
         content: "⚠️ There was an error executing this command.",
-        ephemeral: true,
-      });
+        flags: 64, // MessageFlags.Ephemeral
+      };
+      
+      // Check if interaction was already replied to or deferred
+      if (interaction.replied || interaction.deferred) {
+        await interaction.editReply(errorMessage);
+      } else {
+        await interaction.reply(errorMessage);
+      }
     }
   },
 };

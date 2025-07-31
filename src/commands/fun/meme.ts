@@ -8,9 +8,12 @@ const Meme: Command = {
     .setName("meme")
     .setDescription("Replies with a random meme"),
   async execute(interaction) {
+    // Defer the reply immediately to prevent timeout
+    await interaction.deferReply();
+    
     const meme = await funServices.getMeme();
 
-    interaction.reply(meme.url);
+    await interaction.editReply(meme.url);
   },
 };
 

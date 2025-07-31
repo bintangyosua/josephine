@@ -16,6 +16,9 @@ const Trivia: Command = {
     .setName("trivia")
     .setDescription("Replies with a random trivia"),
   async execute(interaction) {
+    // Defer the reply immediately to prevent timeout
+    await interaction.deferReply();
+    
     // Ambil data trivia dari API
     const data = await funServices.getTrivia();
 
@@ -35,7 +38,7 @@ const Trivia: Command = {
 
     const row = new ActionRowBuilder<ButtonBuilder>().addComponents(buttons);
 
-    await interaction.reply({
+    await interaction.editReply({
       content: `🧠 **Trivia:** ${question}`,
       components: [row],
     });
@@ -51,7 +54,7 @@ const Trivia: Command = {
       if (i.user.id !== interaction.user.id) {
         return i.reply({
           content: "Ini bukan pertanyaan kamu!",
-          ephemeral: true,
+          flags: 64, // MessageFlags.Ephemeral
         });
       }
 
